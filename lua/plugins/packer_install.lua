@@ -51,7 +51,8 @@ return require("packer").startup(
 
         use "lukas-reineke/indent-blankline.nvim" -- indent visualization
 
-        use "Exafunction/codeium.vim" --codeim code helper
+        use "Exafunction/codeium.vim"
+        require("plugins/codeium")
 
         use {
             "nvim-neo-tree/neo-tree.nvim",
