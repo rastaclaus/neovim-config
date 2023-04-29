@@ -1,0 +1,10 @@
+require('base/disable_builtins')
+require('base/search')
+require('base/tabs')
+require('base/other')
+
+require('keys/main')
+require('plugins/packer_install')
+require('keys/plugins')
+require('base/colors')
+require("base/autocmd")
