@@ -11,6 +11,8 @@ return {
     cmd = "pylint",
     stdin = false,
     args = {
+        "-j",
+        "0",
         "-f",
         "json"
     },
