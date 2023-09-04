@@ -1,6 +1,7 @@
 -- require("lint").linters.pylint = require("plugins/pylint")
 -- require("lint").linters.mypy = require("plugins/mypy")
 local mypy = require('lint').linters.mypy
+local ruff = require('lint').linters.ruff
 
 mypy.args = {
     '--show-column-numbers',
