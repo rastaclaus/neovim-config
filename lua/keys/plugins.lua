@@ -28,3 +28,4 @@ nm("<F2>", "<cmd>NeoTreeRevealToggle<CR>")
 
 -- Форматировать файл
 nm("<F5>", "<cmd>Neoformat<CR>")
+nm("<F6>", "<cmd>!ruff --fix %<CR>")

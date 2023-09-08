@@ -1,5 +1,3 @@
--- require("lint").linters.pylint = require("plugins/pylint")
--- require("lint").linters.mypy = require("plugins/mypy")
 local mypy = require('lint').linters.mypy
 
 mypy.args = {
@@ -12,6 +10,6 @@ mypy.args = {
 }
 
 require("lint").linters_by_ft = {
-    python = {"ruff", "mypy", "pycodestyle"},
+    python = {"mypy"},
     yaml = {"yamllint"}
 }
