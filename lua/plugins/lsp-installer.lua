@@ -60,8 +60,9 @@ lspconfig.pyright.setup {
     settings = {
         pyright = {
             analisys = {
-                autoSearchPaths = false,
-                typeCheckingMode = "off"
+                autoSearchPaths = true,
+                typeCheckingMode = "off",
+                diagnosticMode = "workspace"
             }
         }
     }
