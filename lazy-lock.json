@@ -11,7 +11,7 @@
   "codeium.vim": { "branch": "main", "commit": "60e91c749fed80bd19065bc12db74e0241a588a4" },
   "gruvbox-material": { "branch": "master", "commit": "b5f8c6a6c1cda630c53b061b765068a0898d47a3" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
-  "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "lspkind-nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
   "lualine.nvim": { "branch": "master", "commit": "45e27ca739c7be6c49e5496d14fcf45a303c3a63" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "2d89ca96e08eb6e9c8e50e1bb4738bc5125c9f12" },
