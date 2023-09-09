@@ -24,7 +24,7 @@ nm("<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>") -- Действия �
 nm("<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>") -- Переименовать объект
 
 -- Отркыть NvimTree
-nm("<F2>", "<cmd>NeoTreeRevealToggle<CR>")
+nm("<F2>", "<cmd>Neotree toggle<CR>")
 
 -- Форматировать файл
 nm("<F5>", "<cmd>Neoformat<CR>")
