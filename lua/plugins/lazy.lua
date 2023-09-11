@@ -65,13 +65,6 @@ local plugins = {
     "jiangmiao/auto-pairs",
     "tpope/vim-surround",
     {
-        "mfussenegger/nvim-lint",
-        config = function()
-            require("plugins/lint")
-        end
-    }, -- linter
-    "sbdchd/neoformat",
-    {
         "nvim-lualine/lualine.nvim",
         requires = {"kyazdani42/nvim-web-devicons", opt = true},
         config = function()
@@ -92,11 +85,15 @@ local plugins = {
         "SmiteshP/nvim-navic",
         requires = "neovim/nvim-lspconfig"
     },
+    {
+        'creativenull/efmls-configs-nvim',
+        version = 'v1.1.1', -- version is optional, but recommended
+        dependencies = { 'neovim/nvim-lspconfig' },
+    },
     "Vimjas/vim-python-pep8-indent",
     "tpope/vim-fugitive", -- Git
-    "tpope/vim-repeat"
+    "tpope/vim-repeat",
 }
-require("lazy").setup(plugins, opts)
 
+require("lazy").setup(plugins, opts)
 require("plugins/codeium")
-require("plugins/neoformat")

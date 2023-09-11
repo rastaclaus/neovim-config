@@ -28,7 +28,6 @@ cmp.setup {
         {
             {name = "nvim_lsp"}, -- LSP 👄
             {name = "nvim_lsp_signature_help"}, -- Помощь при введении параметров в методах 🚁
-            {name = "cmp_tabnine"}, -- Помощь при введении параметров в методах 🚁
             {name = "luasnip"}, -- Luasnip 🐌
             {name = "buffer"}, -- Буфферы 🐃
             {name = "path"}, -- Пути 🪤

@@ -14,7 +14,8 @@ lspinstaller.setup {
         "gopls", -- go
         "dockerls", -- dockerfiles
         "jsonls", -- json
-        "yamlls" -- yaml
+        "yamlls", -- yaml
+        "efm" -- linters
     }
 }
 
@@ -57,6 +58,9 @@ lspconfig.pyright.setup {
             }
         }
     }
+}
+lspconfig.efm.setup {
+    init_options = {documentFormatting = true},
 }
 
 lspconfig.yamlls.setup(

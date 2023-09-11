@@ -25,6 +25,5 @@ nm("<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>") -- Переименова�
 
 -- Отркыть NvimTree
 nm("<F2>", "<cmd>Neotree toggle<CR>")
-
--- Форматировать файл
-nm("<F5>", "<cmd>Neoformat<CR>")
+-- форматирование
+nm("<F5>", "<cmd>lua vim.lsp.buf.format()<CR>")
