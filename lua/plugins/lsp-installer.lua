@@ -60,22 +60,6 @@ lspconfig.pyright.setup {
     }
 }
 
-require('lspconfig').ruff_lsp.setup {
-  on_attach = on_attach,
-  init_options = {
-    settings = {
-      -- Any extra CLI arguments for `ruff` go here.
-      args = {},
-    }
-  }
-}
--- lspconfig.efm.setup {
---     init_options = {documentFormatting = true},
---     settings = {
---         rootMarkers = {".git", python_root_files}
---     }
--- }
-
 lspconfig.yamlls.setup(
     {
         settings = {

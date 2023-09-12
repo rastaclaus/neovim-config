@@ -1,7 +1,7 @@
 vim.g.ale_use_neovim_diagnostics_api = 1
 
 vim.g.ale_linters = {
-    python = {"ruff", "mypy", "pycodestyle"},
+    python = {"ruff", "mypy", "flake8"},
 }
 
 vim.g.ale_fixers = {
