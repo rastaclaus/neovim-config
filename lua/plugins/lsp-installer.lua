@@ -34,20 +34,22 @@ for _, server in ipairs(lspinstaller.get_installed_servers()) do
     }
 end
 
-local python_root_files = {
-    "pyproject.toml",
-    "setup.py",
-    "setup.cfg",
-    "requirements.txt",
-    "PipFile"
-}
-
 lspconfig.pyright.setup {
     handlers = {
         ["textDocument/publishDiagnostics"] = function(...)
         end
     },
-    root_dir = lspconfig.util.root_pattern(python_root_files.unpack),
+    root_dir = function(fname)
+        local root_files = {
+            'pyproject.toml',
+            'setup.py',
+            'setup.cfg',
+            'requirements.txt',
+            'Pipfile',
+            'pyrightconfig.json',
+        }
+        return lspconfig.util.root_pattern(unpack(root_files))(fname) or lspconfig.util.find_git_ancestor(fname) or lspconfig.util.path.dirname(fname)
+    end,
     single_file_suport = true,
     settings = {
         pyright = {
