@@ -15,6 +15,10 @@ vim.g.ale_fixers = {
         "prettier",
         "yamlfix",
     },
+    json = {
+        "prettier",
+        "jq"
+    },
     xml = {
         "xmllint"
     }
