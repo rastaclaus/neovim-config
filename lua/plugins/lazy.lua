@@ -89,7 +89,7 @@ local plugins = {
     "tpope/vim-fugitive", -- Git
     "tpope/vim-repeat",
 
-    'dense-analysis/ale' -- lint and format
+    'dense-analysis/ale', -- lint and format
 }
 
 require("lazy").setup(plugins, opts)
