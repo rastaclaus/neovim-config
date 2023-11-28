@@ -4,7 +4,8 @@ vim.g.ale_linters = {
     python = {"ruff", "mypy", "flake8"},
     yaml = {"yaml-language-server", "yamllint", "spectral"},
     json = {"jq", "spectral"},
-    xml = {"xmllint"}
+    xml = {"xmllint"},
+    rust = {"analyzer", "rustc"}
 }
 
 vim.g.ale_fixers = {
@@ -22,6 +23,9 @@ vim.g.ale_fixers = {
     },
     xml = {
         "xmllint"
+    },
+    rust = {
+        "rustfmt"
     }
 }
 
