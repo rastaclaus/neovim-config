@@ -5,7 +5,7 @@ vim.g.ale_linters = {
     yaml = {"yaml-language-server", "yamllint", "spectral"},
     json = {"jq", "spectral"},
     xml = {"xmllint"},
-    rust = {"analyzer", "rustc"}
+    rust = {"rustc"}
 }
 
 vim.g.ale_fixers = {
@@ -25,8 +25,10 @@ vim.g.ale_fixers = {
         "xmllint"
     },
     rust = {
-        "rustfmt"
+        "rustfmt",
     }
 }
 
 vim.g.ale_completion_enabled = 0
+-- vim.g.ale_rust_cargo_use_clippy = 1
+-- vim.g.ale_rust_cargo_use_check = 0
