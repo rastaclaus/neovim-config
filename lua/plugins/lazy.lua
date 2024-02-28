@@ -90,6 +90,13 @@ local plugins = {
     "tpope/vim-repeat",
 
     'dense-analysis/ale', -- lint and format
+    {
+        'https://gitlab.com/itaranto/plantuml.nvim',
+        config = function()
+            require("plantuml").setup()
+        end
+    },
+
 }
 
 require("lazy").setup(plugins, opts)

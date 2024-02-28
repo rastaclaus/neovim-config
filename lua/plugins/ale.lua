@@ -10,8 +10,8 @@ vim.g.ale_linters = {
 
 vim.g.ale_fixers = {
     python = {
-        "ruff",
         "ruff_format",
+        "ruff",
     },
     yaml = {
         "prettier",
@@ -30,5 +30,3 @@ vim.g.ale_fixers = {
 }
 
 vim.g.ale_completion_enabled = 0
--- vim.g.ale_rust_cargo_use_clippy = 1
--- vim.g.ale_rust_cargo_use_check = 0
