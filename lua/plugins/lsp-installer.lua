@@ -10,7 +10,6 @@ lspinstaller.setup {
         "cssls", -- CSS
         "emmet_ls", -- HTML
         "pyright", -- Python
-        "clangd", -- c++
         "gopls", -- go
         "dockerls", -- dockerfiles
         "jsonls", -- json
