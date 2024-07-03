@@ -10,8 +10,8 @@ vim.g.ale_linters = {
 
 vim.g.ale_fixers = {
     python = {
-        "ruff_format",
         "ruff",
+        "ruff_format",
     },
     yaml = {
         "prettier",
@@ -26,6 +26,9 @@ vim.g.ale_fixers = {
     },
     rust = {
         "rustfmt",
+    },
+    go = {
+        "golangci-lint",
     }
 }
 

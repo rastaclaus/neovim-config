@@ -49,7 +49,6 @@ local plugins = {
         end
     },
     "lukas-reineke/indent-blankline.nvim", -- indent visualization
-    "Exafunction/codeium.vim",
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -91,14 +90,32 @@ local plugins = {
 
     'dense-analysis/ale', -- lint and format
     {
-        'https://gitlab.com/itaranto/plantuml.nvim',
-        config = function()
-            require("plantuml").setup()
-        end
-    },
 
+       "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("chatgpt").setup({
+                api_key_cmd = "cat /home/artems/.config/openai_key",
+                api_host_cmd = "cat /home/artems/.config/openai_url",
+                openai_params = {
+                    model = "gpt-4o",
+                    frequency_penalty = 0,
+                    presence_penalty = 0,
+                    max_tokens = 4095,
+                    temperature = 0.3,
+                    top_p = 0.1,
+                    n = 1,
+                },
+            })
+        end,
+       dependencies = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "folke/trouble.nvim",
+          "nvim-telescope/telescope.nvim"
+       }
+   },
 }
 
 require("lazy").setup(plugins, opts)
-require("plugins/codeium")
 require("plugins/ale")
