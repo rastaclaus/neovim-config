@@ -94,9 +94,10 @@ local plugins = {
        "jackMort/ChatGPT.nvim",
         event = "VeryLazy",
         config = function()
+            local home = os.getenv("HOME");
             require("chatgpt").setup({
-                api_key_cmd = "cat /home/artems/.config/openai_key",
-                api_host_cmd = "cat /home/artems/.config/openai_url",
+                api_key_cmd = "cat " .. home .. "/.config/openai_key",
+                api_host_cmd = "cat " .. home .. "/.config/openai_url",
                 openai_params = {
                     model = "gpt-4o",
                     frequency_penalty = 0,
