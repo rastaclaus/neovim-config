@@ -8,8 +8,9 @@ return {
                     function()
                         return {
                             exe = "ruff",
-                            args = { "check", "--fix", "-" },
+                            args = { "check", "--fix", "-s", "-" },
                             stdin = true,
+                            ignore_exitcode = true,
                         }
                     end,
                     -- Настройка ruff format
@@ -18,6 +19,7 @@ return {
                             exe = "ruff",
                             args = { "format", "-" },
                             stdin = true,
+                            ignore_exitcode = true,
                         }
                     end,
                 },
