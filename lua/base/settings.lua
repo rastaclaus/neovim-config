@@ -11,6 +11,7 @@ vim.opt.smartindent = true
 vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = {tab="->", trail="-"}
+vim.opt.splitright = true
 
 --настройки поиска
 vim.opt.ignorecase = true
