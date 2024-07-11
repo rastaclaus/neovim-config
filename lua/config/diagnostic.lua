@@ -73,8 +73,8 @@ vim.cmd [[
 ]]
 
 -- Автокоманда для обновления диагностик при смене буфера/вкладки
-vim.api.nvim_create_autocmd({ "BufEnter", "TabEnter" }, {
-  callback = function()
-    vim.diagnostic.setqflist({ open = false })
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufEnter", "TabEnter" }, {
+--   callback = function()
+--     vim.diagnostic.setqflist({ open = false })
+--   end,
+-- })
