@@ -1,6 +1,7 @@
 return {
     'mhartington/formatter.nvim',
     config = function()
+        local util = require "formatter.util"
         require('formatter').setup({
             filetype = {
                 python = {
@@ -40,6 +41,40 @@ return {
                         }
                     end,
                 },
+                json = {
+                    function()
+                        return {
+                            exe = "jq",
+                            stdin = true,
+                            ignore_exitcode = true,
+                        }
+                    end,
+                },
+                yaml = {
+                    function()
+                        return {
+                            exe = "yamlfix",
+                            stdin = true,
+                            ignore_exitcode = true,
+                        }
+                    end,
+                    function()
+                        return {
+                            exe = "yamlfmt",
+                            stdin = true,
+                            ignore_exitcode = true,
+                        }
+                    end,
+                },
+
+                sql = {
+                    function()
+                        return {
+                            exe = "sql-formatter",
+                            stdin = true
+                        }
+                    end,
+                }
             },
         })
 
