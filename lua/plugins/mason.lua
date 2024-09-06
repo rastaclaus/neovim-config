@@ -10,7 +10,6 @@ return {
             ensure_installed = {
                 "pyright",
                 "ruff_lsp",
-                "tsserver",
             },
         })
 
