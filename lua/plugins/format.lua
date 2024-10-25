@@ -46,7 +46,7 @@ return {
                         return {
                             exe = "jq",
                             stdin = true,
-                            ignore_exitcode = true,
+                            ignore_exitcode = false,
                         }
                     end,
                 },
@@ -74,7 +74,15 @@ return {
                             stdin = true
                         }
                     end,
-                }
+                },
+                rust = {
+                    function()
+                        return {
+                            exe = "rustfmt",
+                            stdin = true
+                        }
+                    end,
+                },
             },
         })
 
