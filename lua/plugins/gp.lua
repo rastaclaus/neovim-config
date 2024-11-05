@@ -19,8 +19,8 @@ return {
                     name = "claude-3.5-sonnet",
                     chat = true,
                     command = true,
-                    model = { model = "claude-3.5-sonnet", temperature = 0.8, top_p = 1 },
-                    system_prompt = require("gp.defaults").chat_system_prompt,
+                    model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
+                    system_prompt = "Act as a programmer. Write only code and do not provide any explanations. Always write the complete code:",
                 }
             }
         }
