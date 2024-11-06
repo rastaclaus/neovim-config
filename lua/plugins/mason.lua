@@ -7,10 +7,7 @@ return {
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = {
-                "pyright",
-                "ruff_lsp",
-            },
+            ensure_installed = {},
         })
 
         on_attach_handler = function(client, bufnr)
@@ -50,42 +47,42 @@ return {
             end,
 
             -- Next, you can provide a dedicated handler for specific servers.
-            ["pyright"] = function()
-                local lspconfig = require("lspconfig")
-
-                lspconfig["pyright"].setup {
-                    on_attach = on_attach_handler,
-                    handlers = {
-                        ["textDocument/publishDiagnostics"] = function(...) end
-                    },
-                    root_dir = function(fname)
-                        local root_files = {
-                            'pyproject.toml',
-                            'setup.py',
-                            'setup.cfg',
-                            'requirements.txt',
-                            'Pipfile',
-                            'pyrightconfig.json',
-                        }
-                        -- Проверка, существует ли table.unpack, и использование его
-                        local unpack = table.unpack or unpack
-                        local root_pattern = lspconfig.util.root_pattern(unpack(root_files))
-                        return root_pattern(fname) or
-                            lspconfig.util.find_git_ancestor(fname) or
-                            lspconfig.util.path.dirname(fname)
-                    end,
-                    single_file_support = true,
-                    settings = {
-                        python = {
-                            analysis = {
-                                autoSearchPaths = true,
-                                typeCheckingMode = "off",
-                                diagnosticMode = "openFilesOnly"
-                            }
-                        }
-                    }
-                }
-            end
+            -- ["pyright"] = function()
+            --     local lspconfig = require("lspconfig")
+            --
+            --     lspconfig["pyright"].setup {
+            --         on_attach = on_attach_handler,
+            --         handlers = {
+            --             ["textDocument/publishDiagnostics"] = function(...) end
+            --         },
+            --         root_dir = function(fname)
+            --             local root_files = {
+            --                 'pyproject.toml',
+            --                 'setup.py',
+            --                 'setup.cfg',
+            --                 'requirements.txt',
+            --                 'Pipfile',
+            --                 'pyrightconfig.json',
+            --             }
+            --             -- Проверка, существует ли table.unpack, и использование его
+            --             local unpack = table.unpack or unpack
+            --             local root_pattern = lspconfig.util.root_pattern(unpack(root_files))
+            --             return root_pattern(fname) or
+            --                 lspconfig.util.find_git_ancestor(fname) or
+            --                 lspconfig.util.path.dirname(fname)
+            --         end,
+            --         single_file_support = true,
+            --         settings = {
+            --             python = {
+            --                 analysis = {
+            --                     autoSearchPaths = true,
+            --                     typeCheckingMode = "off",
+            --                     diagnosticMode = "openFilesOnly"
+            --                 }
+            --             }
+            --         }
+            --     }
+            -- end
         }
     end,
 }
