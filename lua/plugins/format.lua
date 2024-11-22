@@ -5,20 +5,20 @@ return {
         require('formatter').setup({
             filetype = {
                 python = {
-                    -- Настройка ruff fix
-                    function()
-                        return {
-                            exe = "ruff",
-                            args = { "check", "--fix", "-s", "-" },
-                            stdin = true,
-                            ignore_exitcode = true,
-                        }
-                    end,
                     -- Настройка ruff format
                     function()
                         return {
                             exe = "ruff",
                             args = { "format", "-" },
+                            stdin = true,
+                            ignore_exitcode = true,
+                        }
+                    end,
+                    -- Настройка ruff fix
+                    function()
+                        return {
+                            exe = "ruff",
+                            args = { "check", "--fix", "-s", "-" },
                             stdin = true,
                             ignore_exitcode = true,
                         }
