@@ -58,13 +58,6 @@ return {
 							ignore_exitcode = true,
 						}
 					end,
-					function()
-						return {
-							exe = "yamlfmt",
-							stdin = true,
-							ignore_exitcode = true,
-						}
-					end,
 				},
 
 				sql = {
