@@ -60,7 +60,20 @@ return {
                         },
                     }
                 }
-            end
+            end,
+            ["ruff"] = function()
+                local lspconfig = require("lspconfig")
+
+                lspconfig["ruff"].setup( {
+                    init_options = {
+                        settings = {
+                            configuration = "~/.ruff.toml",
+                            configurationPreference ="editorFirst",
+
+                        }
+                    }
+                })
+            end,
         }
     end,
 }

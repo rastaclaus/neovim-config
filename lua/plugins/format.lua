@@ -9,7 +9,7 @@ return {
                     function()
                         return {
                             exe = "ruff",
-                            args = { "format", "-" },
+                            args = {"--config", "~/.ruff.toml", "format", "-" },
                             stdin = true,
                             ignore_exitcode = true,
                         }
@@ -18,7 +18,7 @@ return {
                     function()
                         return {
                             exe = "ruff",
-                            args = { "check", "--fix", "-s", "-" },
+                            args = {"--config", "~/.ruff.toml", "check", "--fix", "-s", "-" },
                             stdin = true,
                             ignore_exitcode = true,
                         }
