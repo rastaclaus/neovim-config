@@ -68,7 +68,7 @@ return {
                     init_options = {
                         settings = {
                             configuration = "~/.ruff.toml",
-                            configurationPreference ="editorFirst",
+                            configurationPreference ="filesystemFirst",
 
                         }
                     }
