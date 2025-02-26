@@ -11,15 +11,15 @@ return {
                 }
             },
             log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
-            default_command_agent = "claude-3.5-sonnet",
-            default_chat_agent = "claude-3.5-sonnet",
+            default_command_agent = "claude-3.7-sonnet",
+            default_chat_agent = "claude-3.7-sonnet",
             agents = {
                 {
                     provider = "openai",
-                    name = "claude-3.5-sonnet",
+                    name = "claude-3.7-sonnet",
                     chat = true,
                     command = true,
-                    model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
+                    model = { model = "claude-3.7-sonnet", temperature = 0.7, top_p = 1 },
                     system_prompt = "Act as a programmer. Write only code and do not provide any explanations. Always write the complete code:",
                 }
             }

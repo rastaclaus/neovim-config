@@ -69,7 +69,6 @@ return {
                         settings = {
                             configuration = "~/.ruff.toml",
                             configurationPreference ="filesystemFirst",
-
                         }
                     }
                 })
