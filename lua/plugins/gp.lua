@@ -41,6 +41,7 @@ return {
 			.. "    Use `X | Y` instead of `Union[X, Y]`\n"
 			.. "  Example syntax for Python ≥3.10:\n"
 			.. "  def function_name(arg: int | None, data: list[str | int]) -> dict[str, int | float]:"
+		local translate_prompt = "You a good translator. translate text properly."
 
 		local home = os.getenv("HOME")
 		local conf = {
@@ -53,7 +54,7 @@ return {
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
 			default_command_agent = "claude-3.7-sonnet",
-			default_chat_agent = "claude-3.7-sonnet",
+			default_chat_agent = "claude-3.7-sonnet-ilp",
 			agents = {
 				{
 					provider = "openai",
@@ -70,6 +71,14 @@ return {
 					command = true,
 					model = { model = "claude-3.7-sonnet", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
+				},
+				{
+					provider = "openai",
+					name = "llama-3.3-70b-instruct",
+					chat = false,
+					command = true,
+					model = { model = "llama-3.3-70b-instruct", temperature = 0.7, top_p = 1 },
+					system_prompt = translate_prompt,
 				},
 			},
 		}
