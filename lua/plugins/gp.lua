@@ -28,7 +28,7 @@ return {
 				},
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
-			default_command_agent = "qwen-2.5-coder-32b-instruct",
+			default_command_agent = "gemini-2.0-flash-001",
 			default_chat_agent = "claude-3.7-sonnet-ilp",
 			agents = {
 				{
@@ -69,6 +69,14 @@ return {
 					chat = true,
 					command = true,
 					model = { model = "qwen-2.5-coder-32b-instruct", temperature = 0.7, top_p = 1 },
+					system_prompt = code_prompt,
+				},
+				{
+					provider = "openai",
+					name = "gemini-2.0-flash-001",
+					chat = true,
+					command = true,
+					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 			},
