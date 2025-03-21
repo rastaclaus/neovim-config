@@ -25,14 +25,6 @@ return {
 			agents = {
 				{
 					provider = "openai",
-					name = "llama-3.3-70b-instruct",
-					chat = false,
-					command = true,
-					model = { model = "llama-3.3-70b-instruct", temperature = 0.7, top_p = 1 },
-					system_prompt = translate_prompt,
-				},
-				{
-					provider = "openai",
 					name = "qwen-2.5-coder-32b-instruct",
 					chat = true,
 					command = true,
@@ -53,6 +45,14 @@ return {
 					chat = true,
 					command = true,
 					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
+					system_prompt = document_prompt,
+				},
+				{
+					provider = "openai",
+					name = "claude-3.7-sonnet-writer",
+					chat = true,
+					command = true,
+					model = { model = "claude-3.7-sonnet", temperature = 0.7, top_p = 1 },
 					system_prompt = document_prompt,
 				},
 				{
