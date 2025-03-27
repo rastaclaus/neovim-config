@@ -55,7 +55,7 @@ return {
                     settings = {
                         basedpyright = {
                             analysis = {
-                                ignore = {'*'},
+                                -- ignore = {'*'},
                             }
                         },
                     }
