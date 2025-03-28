@@ -45,7 +45,7 @@ local translate_prompt = "You a good translator. translate text properly."
 				},
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
-			default_command_agent = "qwen-2.5-coder-32b-instruct-code", -- Adjusted default agent
+			default_command_agent = "gemini-2.0-flash-001-code", -- Adjusted default agent
 			default_chat_agent = "deepseek-r1-tech-writer",    -- Adjusted default agent
 			agents = {
 				---Model 1 Agents (MMLU)
@@ -65,14 +65,29 @@ local translate_prompt = "You a good translator. translate text properly."
 					model = { model = "o3-mini", temperature = 0.7, top_p = 1 },
 					system_prompt = tech_writer_prompt,
 				},
-
 				---Model 2 Agents (HumanEval)
 				{
 					provider = "openai",
-					name = "qwen-2.5-coder-32b-instruct-code",
+					name = "gemini-2.0-flash-001-code",
 					chat = true,
 					command = true,
-					model = { model = "qwen-2.5-coder-32b-instruct", temperature = 0.7, top_p = 1 },
+					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
+					system_prompt = code_prompt,
+				},
+				{
+					provider = "openai",
+					name = "gemini-2.5-pro-exp-03-25:free-code",
+					chat = true,
+					command = true,
+					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.7, top_p = 1 },
+					system_prompt = code_prompt,
+				},
+				{
+					provider = "openai",
+					name = "claude-3.7-sonnet-code",
+					chat = true,
+					command = true,
+					model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
@@ -83,7 +98,14 @@ local translate_prompt = "You a good translator. translate text properly."
 					model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
 				},
-
+				{
+					provider = "openai",
+					name = "qwen-2.5-coder-32b-instruct-code",
+					chat = true,
+					command = true,
+					model = { model = "qwen-2.5-coder-32b-instruct", temperature = 0.7, top_p = 1 },
+					system_prompt = code_prompt,
+				},
 				---Model 3 Agents (GPQA)
 				{
 					provider = "openai",
