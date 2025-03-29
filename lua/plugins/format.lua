@@ -18,7 +18,7 @@ return {
 					function()
 						return {
 							exe = "ruff",
-							args = { "--config", "~/.ruff.toml", "check", "--fix", "-s", "-" },
+							args = { "--config", "~/.ruff.toml", "check", "--fix", "--unsafe-fixes", "-s", "-" },
 							stdin = true,
 							ignore_exitcode = true,
 						}

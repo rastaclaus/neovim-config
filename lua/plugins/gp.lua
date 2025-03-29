@@ -33,7 +33,7 @@ adhering strictly to the provided template and technical specifications. Ensure:
 Precision: Validate that all code examples, APIs, and architectural details align with the specification's scope and constraints.
 ]]
 
-local translate_prompt = "You a good translator. translate text properly."
+		local translate_prompt = "You a translator. translate text properly."
 
 		local home = os.getenv("HOME")
 		local conf = {
@@ -46,12 +46,11 @@ local translate_prompt = "You a good translator. translate text properly."
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
 			default_command_agent = "gemini-2.0-flash-001-code", -- Adjusted default agent
-			default_chat_agent = "deepseek-r1-tech-writer",    -- Adjusted default agent
+			default_chat_agent = "writer-deepseek-r1", -- Adjusted default agent
 			agents = {
-				---Model 1 Agents (MMLU)
 				{
 					provider = "openai",
-					name = "deepseek-r1-tech-writer",
+					name = "writer-deepseek-r1$$$",
 					chat = true,
 					command = true,
 					model = { model = "deepseek-r1", temperature = 0.7, top_p = 1 },
@@ -59,85 +58,68 @@ local translate_prompt = "You a good translator. translate text properly."
 				},
 				{
 					provider = "openai",
-					name = "o3-mini-tech-writer",
+					name = "writer-o3-mini$$$",
 					chat = true,
 					command = true,
 					model = { model = "o3-mini", temperature = 0.7, top_p = 1 },
 					system_prompt = tech_writer_prompt,
 				},
-				---Model 2 Agents (HumanEval)
 				{
 					provider = "openai",
-					name = "gemini-2.0-flash-001-code",
-					chat = true,
-					command = true,
-					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
-					system_prompt = code_prompt,
-				},
-				{
-					provider = "openai",
-					name = "gemini-2.5-pro-exp-03-25:free-code",
+					name = "writer-gemini-2.5-pro-exp-03-25:free",
 					chat = true,
 					command = true,
 					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
 				},
+				---Models for codegen
 				{
 					provider = "openai",
-					name = "claude-3.7-sonnet-code",
+					name = "code-gemini-2.0-flash-001",
 					chat = true,
 					command = true,
-					model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
+					model = { model = "gemini-2.0-flash-001", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
 					provider = "openai",
-					name = "claude-3.5-sonnet-code",
+					name = "code-gemini-2.5-pro-exp-03-25:free",
 					chat = true,
 					command = true,
-					model = { model = "claude-3.5-sonnet", temperature = 0.7, top_p = 1 },
+					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
 					provider = "openai",
-					name = "qwen-2.5-coder-32b-instruct-code",
+					name = "code-claude-3.7-sonnet$$$",
 					chat = true,
 					command = true,
-					model = { model = "qwen-2.5-coder-32b-instruct", temperature = 0.7, top_p = 1 },
+					model = { model = "claude-3.5-sonnet", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
-				---Model 3 Agents (GPQA)
 				{
 					provider = "openai",
-					name = "o3-mini-ilp-writer",
+					name = "code-codestral-2501-code",
 					chat = true,
 					command = true,
-					model = { model = "o3-mini", temperature = 0.7, top_p = 1 },
-					system_prompt = ilp_writer_prompt,
+					model = { model = "codestral-2501", temperature = 0.2, top_p = 1 },
+					system_prompt = code_prompt,
 				},
 				{
 					provider = "openai",
-					name = "gemini-2.0-flash-thinking-exp:free-ilp-writer",
+					name = "code-o3-mini$$$",
 					chat = true,
 					command = true,
-					model = { model = "gemini-2.0-flash-thinking-exp:free", temperature = 0.7, top_p = 1 },
-					system_prompt = ilp_writer_prompt,
+					model = { model = "o3-mini", temperature = 0.2, top_p = 1 },
+					system_prompt = code_prompt,
 				},
 				{
 					provider = "openai",
-					name = "deepseek-r1-ilp-writer",
+					name = "code-o3-mini-high$$$$$$",
 					chat = true,
 					command = true,
-					model = { model = "deepseek-r1", temperature = 0.7, top_p = 1 },
-					system_prompt = ilp_writer_prompt,
-				},
-				{
-					provider = "openai",
-					name = "gemini-2.0-flash-001-translator",
-					chat = true,
-					command = true,
-					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
-					system_prompt = translate_prompt,
+					model = { model = "o3-mini-high", temperature = 0.2, top_p = 1 },
+					system_prompt = code_prompt,
 				},
 			},
 		}
@@ -145,4 +127,3 @@ local translate_prompt = "You a good translator. translate text properly."
 		-- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
 	end,
 }
-
