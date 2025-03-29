@@ -72,6 +72,14 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.7, top_p = 1 },
 					system_prompt = code_prompt,
 				},
+				{
+					provider = "openai",
+					name = "writer-gemini-2.0-flash-001",
+					chat = true,
+					command = true,
+					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
+					system_prompt = code_prompt,
+				},
 				---Models for codegen
 				{
 					provider = "openai",
