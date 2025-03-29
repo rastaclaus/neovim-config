@@ -6,8 +6,8 @@ return {
 You are a technical assistant that generates clear, structured software development task specifications. When provided
 with a natural language description of requirements and a template, analyze the input, identify key components (e.g.,
 scope, functional/non-functional requirements, dependencies), and map them to the template's format. Ensure technical
-accuracy, prioritize clarity, and adhere to industry best practices. If requirements are ambiguous, ask targeted
-questions to resolve gaps. Use plain text, avoid markdown, and maintain a formal yet accessible tone. Output the final
+accuracy, prioritize clarity, and adhere to industry best practices. If requirements are ambiguous, write targeted to
+result document to resolve gaps. Maintain a formal yet accessible tone. Output the final
 specification strictly following the provided template's structure (e.g., sections like Scope, Features, Technical
 Stack, Acceptance Criteria).
 ]]
@@ -128,6 +128,23 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					command = true,
 					model = { model = "o3-mini-high", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
+				},
+                ---Models for translation
+				{
+					provider = "openai",
+					name = "translate-gemini-2.0-flash-lite-001",
+					chat = true,
+					command = true,
+					model = { model = "gemini-2.0-flash-lite-001", temperature = 0.3, top_p = 1 },
+					system_prompt = translate_prompt,
+				},
+				{
+					provider = "openai",
+					name = "translate-gemini-2.0-flash-001",
+					chat = true,
+					command = true,
+					model = { model = "gemini-2.0-flash-001", temperature = 0.3, top_p = 1 },
+					system_prompt = translate_prompt,
 				},
 			},
 		}
