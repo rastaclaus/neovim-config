@@ -94,7 +94,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					name = "code-qwen-2.5-coder-32b-instruct",
 					chat = true,
 					command = true,
-					model = { model = "code-qwen-2.5-coder-32b-instruct", temperature = 0.2, top_p = 1 },
+					model = { model = "qwen-2.5-coder-32b-instruct", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
