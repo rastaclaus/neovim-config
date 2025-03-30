@@ -6,7 +6,7 @@ return {
 You are a technical assistant that generates clear, structured software development task specifications. When provided
 with a natural language description of requirements and a template, analyze the input, identify key components (e.g.,
 scope, functional/non-functional requirements, dependencies), and map them to the template's format. Ensure technical
-accuracy, prioritize clarity, and adhere to industry best practices. If requirements are ambiguous, write targeted to
+accuracy, prioritize clarity, and adhere to industry best practices. If requirements are ambiguous, write targeted question to
 result document to resolve gaps. Maintain a formal yet accessible tone. Output the final
 specification strictly following the provided template's structure (e.g., sections like Scope, Features, Technical
 Stack, Acceptance Criteria).
@@ -46,14 +46,22 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
 			default_command_agent = "gemini-2.0-flash-001-code", -- Adjusted default agent
-			default_chat_agent = "writer-deepseek-r1", -- Adjusted default agent
+			default_chat_agent = "writer-deepseek-r1$$", -- Adjusted default agent
 			agents = {
 				{
 					provider = "openai",
-					name = "writer-deepseek-r1$$$",
+					name = "writer-deepseek-r1$$",
 					chat = true,
 					command = true,
-					model = { model = "deepseek-r1", temperature = 0.7, top_p = 1 },
+					model = { model = "deepseek-r1", temperature = 0.5, top_p = 1 },
+					system_prompt = tech_writer_prompt,
+				},
+				{
+					provider = "openai",
+					name = "writer-claude-3.7-sonnet$$$",
+					chat = true,
+					command = true,
+					model = { model = "claude-3.7-sonnet", temperature = 0.5, top_p = 1 },
 					system_prompt = tech_writer_prompt,
 				},
 				{
@@ -61,7 +69,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					name = "writer-o3-mini$$$",
 					chat = true,
 					command = true,
-					model = { model = "o3-mini", temperature = 0.7, top_p = 1 },
+					model = { model = "o3-mini", temperature = 0.5, top_p = 1 },
 					system_prompt = tech_writer_prompt,
 				},
 				{
@@ -69,7 +77,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					name = "writer-gemini-2.5-pro-exp-03-25:free",
 					chat = true,
 					command = true,
-					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.7, top_p = 1 },
+					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.5, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
@@ -77,10 +85,18 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					name = "writer-gemini-2.0-flash-001",
 					chat = true,
 					command = true,
-					model = { model = "gemini-2.0-flash-001", temperature = 0.7, top_p = 1 },
+					model = { model = "gemini-2.0-flash-001", temperature = 0.5, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				---Models for codegen
+				{
+					provider = "openai",
+					name = "code-qwen-2.5-coder-32b-instruct",
+					chat = true,
+					command = true,
+					model = { model = "code-qwen-2.5-coder-32b-instruct", temperature = 0.2, top_p = 1 },
+					system_prompt = code_prompt,
+				},
 				{
 					provider = "openai",
 					name = "code-gemini-2.0-flash-001",
@@ -102,7 +118,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					name = "code-claude-3.7-sonnet$$$",
 					chat = true,
 					command = true,
-					model = { model = "claude-3.5-sonnet", temperature = 0.2, top_p = 1 },
+					model = { model = "claude-3.7-sonnet", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{

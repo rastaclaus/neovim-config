@@ -1,6 +1,7 @@
-require('base/disable_builtins')
-require('base/settings')
-require('config/lazy')
-require('config/keymaps')
-require('config/autocmd')
-require('config/diagnostic')
+require "base/disable_builtins"
+require "base/settings"
+require "config/lazy"
+require "config/keymaps"
+require "config/autocmd"
+require "config/diagnostic"
+
