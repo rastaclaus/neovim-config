@@ -45,7 +45,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 				},
 			},
 			log_file = vim.fn.stdpath("log"):gsub("/$", "") .. "/gp.nvim.log",
-			default_command_agent = "gemini-2.0-flash-001-code", -- Adjusted default agent
+			default_command_agent = "code-gemini-2.0-flash-001", -- Adjusted default agent
 			default_chat_agent = "writer-deepseek-r1$$", -- Adjusted default agent
 			agents = {
 				{
