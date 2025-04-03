@@ -14,6 +14,16 @@ return {
 			enable_cursor_planning_mode = true, -- enable cursor planning mode!
 		},
 		vendors = {
+			bothub_gemini_2_5_thinking_exp = {
+				__inherited_from = "openai",
+				api_key_name = "OPENAI_API_KEY",
+				endpoint = "https://bothub.chat/api/v2/openai/v1",
+				model = "gemini-2.5-pro-exp-03-25:free", -- your desired model (or use gpt-4o, etc.)
+				timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+				temperature = 0,
+				reasoning_effort = "medium",
+				max_tokens = 64000,
+			},
 			bothub_claude_3_5_haiku = {
 				__inherited_from = "openai",
 				api_key_name = "OPENAI_API_KEY",
@@ -39,6 +49,26 @@ return {
 				api_key_name = "OPENAI_API_KEY",
 				endpoint = "https://bothub.chat/api/v2/openai/v1",
 				model = "deepseek-r1", -- your desired model (or use gpt-4o, etc.)
+				timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+				temperature = 0,
+				reasoning_effort = "medium",
+				max_tokens = 8000,
+			},
+			bothub_deepseek_v3 = {
+				__inherited_from = "openai",
+				api_key_name = "OPENAI_API_KEY",
+				endpoint = "https://bothub.chat/api/v2/openai/v1",
+				model = "deepseek-chat", -- your desired model (or use gpt-4o, etc.)
+				timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+				temperature = 0,
+				reasoning_effort = "medium",
+				max_tokens = 8000,
+			},
+			bothub_grok = {
+				__inherited_from = "openai",
+				api_key_name = "OPENAI_API_KEY",
+				endpoint = "https://bothub.chat/api/v2/openai/v1",
+				model = "grok-beta", -- your desired model (or use gpt-4o, etc.)
 				timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
 				temperature = 0,
 				reasoning_effort = "medium",
