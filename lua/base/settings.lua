@@ -10,9 +10,11 @@ vim.opt.tabstop = 4
 vim.opt.smartindent = true
 vim.opt.expandtab = true
 vim.opt.list = true
-vim.opt.listchars = {tab="->", trail="-"}
+vim.opt.listchars = { tab = "->", trail = "-" }
 vim.opt.splitright = true
 vim.opt.textwidth = 120
+vim.opt.wrap = false
+vim.opt.statuscolumn = ""
 
 --настройки поиска
 vim.opt.ignorecase = true
@@ -21,5 +23,3 @@ vim.opt.showmatch = true
 vim.opt.incsearch = true
 vim.wo.number = true
 vim.wo.wrap = false
-
-
