@@ -5,7 +5,12 @@ return {
         "neovim/nvim-lspconfig",
     },
     config = function()
-        require("mason").setup()
+        require("mason").setup({
+            ensure_installed = {
+                "basedpyright",
+                "ruff",
+            }
+        })
         require("mason-lspconfig").setup({
             ensure_installed = {},
         })

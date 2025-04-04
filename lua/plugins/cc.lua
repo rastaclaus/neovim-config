@@ -1,5 +1,6 @@
 return {
 	"olimorris/codecompanion.nvim",
+    config = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
@@ -75,7 +76,7 @@ return {
 		},
 		strategies = {
 			chat = {
-				adapter = "claude",
+				adapter = "gemini",
 			},
 			inline = {
 				adapter = "gemini",
