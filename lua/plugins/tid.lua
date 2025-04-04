@@ -13,7 +13,7 @@ return {
         format = function(diagnostic)
           local message = diagnostic.message
           if diagnostic.code then
-            message = message .. diagnostic.config
+            message = message .. diagnostic.code
           end
           return message
         end,
