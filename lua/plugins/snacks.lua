@@ -21,7 +21,7 @@ return {
 			timeout = 3000,
 		},
 		notify = { enabled = true },
-		picker = { enabled = true },
+		picker = { enabled = false },
 		quickfile = { enabled = true },
 		rename = { enabled = true },
 		scope = { enabled = true },
@@ -546,6 +546,7 @@ return {
 					Snacks.debug.backtrace()
 				end
 				vim.print = _G.dd -- Override print to use snacks for `:=` command
+                vim.ui.input = Snacks.input
 
 				-- Create some toggle mappings
 				Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")

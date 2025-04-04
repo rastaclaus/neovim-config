@@ -1,5 +1,5 @@
 -- vim.keymap.set('n', '<F2>', ':Neotree toggle<CR>',{noremap = true})
-vim.keymap.set('n', '<F2>', ':CodeCompanionChat toggle<CR>',{noremap = true})
+-- vim.keymap.set('n', '<F2>', ':CodeCompanionChat toggle<CR>',{noremap = true})
 vim.keymap.set('n', '<leader><esc>', ':nohlsearch<CR>', {noremap = true})
 
 -- local builtin = require('telescope.builtin')
