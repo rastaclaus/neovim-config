@@ -1,11 +1,20 @@
 return {
 	"olimorris/codecompanion.nvim",
-    config = true,
+	config = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
 	},
 	opts = {
+		display = {
+			diff = {
+				enabled = true,
+				close_chat_at = 240, -- Close an open chat buffer if the total columns of your display are less than...
+				layout = "vertical", -- vertical|horizontal split for default provider
+				opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
+				provider = "default", -- default|mini_diff
+			},
+		},
 		adapters = {
 			opts = {
 				show_defaults = false,
@@ -13,14 +22,14 @@ return {
 			qwen = function()
 				return require("codecompanion.adapters").extend("openai", {
 					name = "qwen",
-                    url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
+					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
 						model = {
 							default = "qwen-2.5-coder-32b-instruct", -- define llm model to be used
-							choices = {"qwen-2.5-coder-32b-instruct", "qwen-2.5-72b-instruct"}, -- define llm model to be used
+							choices = { "qwen-2.5-coder-32b-instruct", "qwen-2.5-72b-instruct" }, -- define llm model to be used
 						},
 					},
 				})
@@ -28,14 +37,14 @@ return {
 			claude = function()
 				return require("codecompanion.adapters").extend("openai", {
 					name = "claude",
-                    url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
+					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
 						model = {
 							default = "claude-3.5-haiku", -- define llm model to be used
-							choices = {"claude-3.5-haiku", "claude-3.5-sonnet", "claude-3.7-sonnet"}, -- define llm model to be used
+							choices = { "claude-3.5-haiku", "claude-3.5-sonnet", "claude-3.7-sonnet" }, -- define llm model to be used
 						},
 					},
 				})
@@ -43,7 +52,7 @@ return {
 			gemini = function()
 				return require("codecompanion.adapters").extend("openai", {
 					name = "gemini",
-                    url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
+					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
@@ -51,9 +60,9 @@ return {
 						model = {
 							default = "gemini-2.0-flash-001", -- define llm model to be used
 							choices = {
-                                "gemini-2.0-flash-001",
-                                "gemini-2.5-pro-exp-03-25:free",
-                            },
+								"gemini-2.0-flash-001",
+								"gemini-2.5-pro-exp-03-25:free",
+							},
 						},
 					},
 				})
@@ -61,14 +70,14 @@ return {
 			deepseek = function()
 				return require("codecompanion.adapters").extend("openai", {
 					name = "deepseek",
-                    url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
+					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
 						model = {
 							default = "deepseek-chat", -- define llm model to be used
-							choices = {"deepseek-chat", "deepseek-r1"}, -- define llm model to be used
+							choices = { "deepseek-chat", "deepseek-r1" }, -- define llm model to be used
 						},
 					},
 				})
@@ -82,6 +91,9 @@ return {
 				adapter = "gemini",
 			},
 			cmd = {
+				adapter = "gemini",
+			},
+			agent = {
 				adapter = "gemini",
 			},
 		},

@@ -21,7 +21,7 @@ return {
 			timeout = 3000,
 		},
 		notify = { enabled = true },
-		picker = { enabled = false },
+		picker = { enabled = true },
 		quickfile = { enabled = true },
 		rename = { enabled = true },
 		scope = { enabled = true },
