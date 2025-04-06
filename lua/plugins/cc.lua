@@ -12,7 +12,7 @@ return {
 				close_chat_at = 240, -- Close an open chat buffer if the total columns of your display are less than...
 				layout = "vertical", -- vertical|horizontal split for default provider
 				opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
-				provider = "default", -- default|mini_diff
+				provider = "mini_diff", -- default|mini_diff
 			},
 		},
 		adapters = {
@@ -20,10 +20,11 @@ return {
 				show_defaults = false,
 			},
 			qwen = function()
-				return require("codecompanion.adapters").extend("openai", {
+				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "qwen",
-					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
+						url = "https://bothub.chat/api/v2/openai",
+						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
@@ -35,10 +36,11 @@ return {
 				})
 			end,
 			claude = function()
-				return require("codecompanion.adapters").extend("openai", {
+				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "claude",
-					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
+						url = "https://bothub.chat/api/v2/openai",
+						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
@@ -50,10 +52,11 @@ return {
 				})
 			end,
 			gemini = function()
-				return require("codecompanion.adapters").extend("openai", {
+				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "gemini",
-					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
+						url = "https://bothub.chat/api/v2/openai",
+						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
@@ -68,10 +71,11 @@ return {
 				})
 			end,
 			deepseek = function()
-				return require("codecompanion.adapters").extend("openai", {
+				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "deepseek",
-					url = "https://bothub.chat/api/v2/openai/v1/chat/completions", -- optional: default value is ollama url http://127.0.0.1:11434
 					env = {
+						url = "https://bothub.chat/api/v2/openai",
+						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/openai_key",
 					},
 					schema = {
@@ -86,6 +90,22 @@ return {
 		strategies = {
 			chat = {
 				adapter = "claude",
+				slash_commands = {
+					["file"] = {
+						callback = "strategies.chat.slash_commands.file",
+						opts = {
+							provider = snacks,
+							contains_code = true,
+						},
+					},
+					["buffer"] = {
+						callback = "strategies.chat.slash_commands.buffer",
+						opts = {
+							provider = snacks,
+							contains_code = true,
+						},
+					},
+				},
 			},
 			inline = {
 				adapter = "gemini",

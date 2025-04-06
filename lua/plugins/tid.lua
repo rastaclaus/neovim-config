@@ -10,14 +10,13 @@ return {
 				add_messages = true,
 				show_all_diags_on_cursor_line = true,
 
-        format = function(diagnostic)
-          local message = diagnostic.message
-          if diagnostic.code then
-            message = message .. diagnostic.code
-          end
-          return message
-        end,
-      
+				format = function(diagnostic)
+					local message = diagnostic.message
+					if diagnostic.code then
+						message = message .. diagnostic.code
+					end
+					return message
+				end,
 			},
 		})
 		vim.diagnostic.config({ virtual_text = false })
