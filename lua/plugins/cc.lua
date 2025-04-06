@@ -22,6 +22,7 @@ return {
 			qwen = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "qwen",
+					formatted_name = "BotHubQwen",
 					env = {
 						url = "https://bothub.chat/api/v2/openai",
 						chat_url = "/v1/chat/completions",
@@ -38,6 +39,7 @@ return {
 			claude = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "claude",
+					formatted_name = "BotHubClaude",
 					env = {
 						url = "https://bothub.chat/api/v2/openai",
 						chat_url = "/v1/chat/completions",
@@ -54,6 +56,7 @@ return {
 			gemini = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "gemini",
+					formatted_name = "BotHubGemini",
 					env = {
 						url = "https://bothub.chat/api/v2/openai",
 						chat_url = "/v1/chat/completions",
@@ -73,6 +76,7 @@ return {
 			deepseek = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "deepseek",
+					formatted_name = "BotHubDeepseek",
 					env = {
 						url = "https://bothub.chat/api/v2/openai",
 						chat_url = "/v1/chat/completions",

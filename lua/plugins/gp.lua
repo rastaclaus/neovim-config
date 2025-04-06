@@ -145,7 +145,7 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 					model = { model = "o3-mini-high", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
-                ---Models for translation
+				---Models for translation
 				{
 					provider = "openai",
 					name = "translate-gemini-2.0-flash-lite-001",
