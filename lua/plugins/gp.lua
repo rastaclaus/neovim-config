@@ -74,10 +74,10 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 				},
 				{
 					provider = "openai",
-					name = "writer-gemini-2.5-pro-exp-03-25:free",
+					name = "writer-gemini-2.5-pro-preview-03-25",
 					chat = true,
 					command = true,
-					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.5, top_p = 1 },
+					model = { model = "gemini-2.5-pro-preview-03-25", temperature = 0.5, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{
@@ -107,10 +107,10 @@ Precision: Validate that all code examples, APIs, and architectural details alig
 				},
 				{
 					provider = "openai",
-					name = "code-gemini-2.5-pro-exp-03-25:free",
+					name = "code-gemini-2.5-pro-preview-03-25",
 					chat = true,
 					command = true,
-					model = { model = "gemini-2.5-pro-exp-03-25:free", temperature = 0.2, top_p = 1 },
+					model = { model = "gemini-2.5-pro-preview-03-25", temperature = 0.2, top_p = 1 },
 					system_prompt = code_prompt,
 				},
 				{

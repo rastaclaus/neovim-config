@@ -67,7 +67,7 @@ return {
 							default = "gemini-2.0-flash-001", -- define llm model to be used
 							choices = {
 								"gemini-2.0-flash-001",
-								"gemini-2.5-pro-exp-03-25:free",
+								"gemini-2.5-pro-preview-03-25",
 							},
 						},
 					},

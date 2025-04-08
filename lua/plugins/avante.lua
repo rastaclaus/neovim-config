@@ -3,34 +3,40 @@ return {
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
 	opts = {
-		provider = "bothub-claude-haiku",
-        cursor_applying_provider = "bothub-gemini",
+		provider = "bothub-claude-3.5-haiku",
+        cursor_applying_provider = "bothub-gemini-2.0-flash-001",
         behaviour = {
             enable_cursor_planning_module = true,
         },
         vendors = {
-            ["bothub-claude-haiku"] = {
+            ["bothub-claude-3.5-haiku"] = {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "claude-3.5-haiku",
                 api_key_name = "BOTHUB_API_KEY",
             },
-            ["bothub-deepseek"] = {
+            ["bothub-deepseek-r1"] = {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "deepseek-r1",
                 api_key_name = "BOTHUB_API_KEY",
             },
-            ["bothub-qwen"] = {
+            ["bothub-qwen-qwen-2.5-coder-32b-instruct"] = {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "qwen-2.5-coder-32b-instruct",
                 api_key_name = "BOTHUB_API_KEY",
             },
-            ["bothub-gemini"] = {
+            ["bothub-gemini-2.0-flash-001"] = {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "gemini-2.0-flash-001",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-gemini-2.5-pro-preview-03-25"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "gemini-2.5-pro-preview-03-25",
                 api_key_name = "BOTHUB_API_KEY",
             },
             ["ntech-qwen2.5-coder-32b-instruct"] = {
