@@ -32,6 +32,20 @@ return {
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "gemini-2.0-flash-001",
                 api_key_name = "BOTHUB_API_KEY",
+            },
+            ["ntech-qwen2.5-coder-32b-instruct"] = {
+                __inherited_from = "openai",
+                endpoint = "https://llm-code.ntechlab.ru:36502/v1",
+                model = "Qwen/Qwen2.5-Coder-32B-Instruct",
+                api_key_name = "NTECH_API_KEY",
+                disable_tools = true,
+            },
+            ["ntech-qwen-2.5-72b-instruct"] = {
+                __inherited_from = "openai",
+                endpoint = "https://llm-common.ntechlab.ru:36507/v1",
+                model = "Qwen/Qwen2.5-72B-Instruct",
+                api_key_name = "NTECH_API_KEY",
+                disable_tools = true,
             }
         }
 	},

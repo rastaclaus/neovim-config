@@ -90,12 +90,12 @@ return {
 					},
 				})
 			end,
-			["qwen-2.5-coder-ntech"] = function()
+			["ntech/qwen2.5-Coder-32B-Instruct"] = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
-					name = "qwen-coder-ntech",
-					formatted_name = "QwenCoderNtech",
+					name = "ntech/qwen2.5-Coder-32B-Instruct",
+					formatted_name = "NTech/Qwen2.5-Coder-32B-Instruct",
 					env = {
-						url = "cmd: cat ~/.config/ntech_coder_qwen_url",
+						url = "https://llm-code.ntechlab.ru:36502",
 						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/ntech_key",
 					},
@@ -107,12 +107,12 @@ return {
 					},
 				})
 			end,
-			["qwen-2.5-72b-ntech"] = function()
+			["ntech/qwen-2.5-72b-instruct"] = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
-					name = "qwen-ntech",
-					formatted_name = "QwenNtech",
+					name = "ntech/qwen-2.5-72b-instruct",
+					formatted_name = "Ntech/Qwen2.5-72B-Instruct",
 					env = {
-						url = "cmd: cat ~/.config/ntech_common_qwen_url",
+						url = "https://llm-common.ntechlab.ru:36507",
 						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/ntech_key",
 					},
