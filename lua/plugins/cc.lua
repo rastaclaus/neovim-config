@@ -95,7 +95,7 @@ return {
 					name = "qwen-coder-ntech",
 					formatted_name = "QwenCoderNtech",
 					env = {
-						url = "https://p2.msk-1.hpc-park.ru:36502",
+						url = "cmd: cat ~/.config/ntech_coder_qwen_url",
 						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/ntech_key",
 					},
@@ -112,7 +112,7 @@ return {
 					name = "qwen-ntech",
 					formatted_name = "QwenNtech",
 					env = {
-						url = "https://llm-common.ntechlab.ru:36507",
+						url = "cmd: cat ~/.config/ntech_common_qwen_url",
 						chat_url = "/v1/chat/completions",
 						api_key = "cmd: cat ~/.config/ntech_key",
 					},
