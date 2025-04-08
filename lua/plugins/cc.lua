@@ -90,6 +90,40 @@ return {
 					},
 				})
 			end,
+			["qwen-2.5-coder-ntech"] = function()
+				return require("codecompanion.adapters").extend("openai_compatible", {
+					name = "qwen-coder-ntech",
+					formatted_name = "QwenCoderNtech",
+					env = {
+						url = "https://p2.msk-1.hpc-park.ru:36502",
+						chat_url = "/v1/chat/completions",
+						api_key = "cmd: cat ~/.config/ntech_key",
+					},
+					schema = {
+						model = {
+							default = "Qwen/Qwen2.5-Coder-32B-Instruct", -- define llm model to be used
+							choices = { "Qwen/Qwen2.5-Coder-32B-Instruct" }, -- define llm model to be used
+						},
+					},
+				})
+			end,
+			["qwen-2.5-72b-ntech"] = function()
+				return require("codecompanion.adapters").extend("openai_compatible", {
+					name = "qwen-ntech",
+					formatted_name = "QwenNtech",
+					env = {
+						url = "https://llm-common.ntechlab.ru:36507",
+						chat_url = "/v1/chat/completions",
+						api_key = "cmd: cat ~/.config/ntech_key",
+					},
+					schema = {
+						model = {
+							default = "Qwen/Qwen2.5-72B-Instruct", -- define llm model to be used
+							choices = { "Qwen/Qwen2.5-72B-Instruct" }, -- define llm model to be used
+						},
+					},
+				})
+			end,
 		},
 		strategies = {
 			chat = {
@@ -98,14 +132,14 @@ return {
 					["file"] = {
 						callback = "strategies.chat.slash_commands.file",
 						opts = {
-							provider = snacks,
+							provider = "snacks",
 							contains_code = true,
 						},
 					},
 					["buffer"] = {
 						callback = "strategies.chat.slash_commands.buffer",
 						opts = {
-							provider = snacks,
+							provider = "snacks",
 							contains_code = true,
 						},
 					},

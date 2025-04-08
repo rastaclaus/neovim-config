@@ -5,6 +5,9 @@ return {
 	opts = {
 		provider = "bothub-claude-haiku",
         cursor_applying_provider = "bothub-gemini",
+        behaviour {
+            enable_cursor_planning_module = true,
+        }
         vendors = {
             ["bothub-claude-haiku"] = {
                 __inherited_from = "openai",
