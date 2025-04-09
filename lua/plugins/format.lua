@@ -1,93 +1,43 @@
-return {
-	"mhartington/formatter.nvim",
-	config = function()
-		local util = require("formatter.util")
-		require("formatter").setup({
-			filetype = {
-				python = {
-					-- Настройка ruff format
-					function()
-						return {
-							exe = "ruff",
-							args = { "--config", "~/.ruff.toml", "format", "-" },
-							stdin = true,
-							ignore_exitcode = true,
-						}
-					end,
-					-- Настройка ruff fix
-					function()
-						return {
-							exe = "ruff",
-							args = { "--config", "~/.ruff.toml", "check", "--fix", "--unsafe-fixes", "-s", "-" },
-							stdin = true,
-							ignore_exitcode = true,
-						}
-					end,
-				},
-				go = {
-					-- Настройка gofmt
-					function()
-						return {
-							exe = "gofmt",
-							args = {},
-							stdin = true,
-						}
-					end,
-					function()
-						return {
-							exe = "goimports",
-							args = {},
-							stdin = true,
-						}
-					end,
-				},
-				json = {
-					function()
-						return {
-							exe = "jq",
-							stdin = true,
-							ignore_exitcode = false,
-						}
-					end,
-				},
-				yaml = {
-					function()
-						return {
-							exe = "yamlfix",
-							stdin = true,
-							ignore_exitcode = true,
-						}
-					end,
-				},
+local format = function()
+	local conform = require("conform")
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 500,
+	})
+end
 
-				sql = {
-					function()
-						return {
-							exe = "sql-formatter",
-							stdin = true,
-						}
-					end,
-				},
-				rust = {
-					function()
-						return {
-							exe = "rustfmt",
-							stdin = true,
-						}
-					end,
-				},
-				lua = {
-					function()
-						return {
-							exe = "stylua",
-							stdin = false,
-						}
-					end,
-				},
+return {
+	"stevearc/conform.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	config = function()
+		local conform = require("conform")
+		conform.setup({
+			formatters_by_ft = {
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
+				svelte = { "prettier" },
+				css = { "prettier" },
+				html = { "prettier" },
+				json = { "prettier" },
+				yaml = { "prettier" },
+				markdown = { "prettier" },
+				graphql = { "prettier" },
+				lua = { "stylua" },
+				python = { "ruff" },
+				go = { "gofmt" },
 			},
+			format_on_save = nil,
+			-- format_on_save = nil{
+			-- 	lsp_fallback = true,
+			-- 	async = false,
+			-- 	timeout_ms = 500,
+			-- },
 		})
 
-		-- Создание команды для форматирования с помощью F5
-		vim.api.nvim_set_keymap("n", "<F5>", ":Format<CR>", { noremap = true, silent = true })
+		vim.keymap.set({ "v" }, "<leader>f", format, { desc = "Format range (in visual mode)" })
+		vim.keymap.set({ "n" }, "<F5>", format, { desc = "Format file" })
 	end,
 }
