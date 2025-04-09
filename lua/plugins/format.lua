@@ -26,7 +26,7 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
-				python = { "ruff" },
+                python = { "ruff_fix", "ruff_organize_imports",  "ruff_format" },
 				go = { "gofmt" },
 			},
 			format_on_save = nil,
