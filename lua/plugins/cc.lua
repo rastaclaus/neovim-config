@@ -48,7 +48,12 @@ return {
 					schema = {
 						model = {
 							default = "claude-3.5-haiku", -- define llm model to be used
-							choices = { "claude-3.5-haiku", "claude-3.5-sonnet", "claude-3.7-sonnet", "claude-3.7-sonnet:thinking" }, -- define llm model to be used
+							choices = {
+								"claude-3.5-haiku",
+								"claude-3.5-sonnet",
+								"claude-3.7-sonnet",
+								"claude-3.7-sonnet:thinking",
+							}, -- define llm model to be used
 						},
 					},
 				})
@@ -144,23 +149,19 @@ return {
 		},
 		strategies = {
 			chat = {
-				adapter = "claude",
-				slash_commands = {
-					["file"] = {
-						callback = "strategies.chat.slash_commands.file",
+				tools = {
+					["mcp"] = {
+						callback = function()
+							return require("mcphub.extensions.codecompanion")
+						end,
 						opts = {
-							provider = "snacks",
-							contains_code = true,
+							required_approval = true,
+							temperature = 0.7,
 						},
-					},
-					["buffer"] = {
-						callback = "strategies.chat.slash_commands.buffer",
-						opts = {
-							provider = "snacks",
-							contains_code = true,
-						},
+						description = "Call tools and resources from the MCP Servers",
 					},
 				},
+				adapter = "claude",
 			},
 			inline = {
 				adapter = "gemini",
