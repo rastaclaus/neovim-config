@@ -4,7 +4,7 @@ return {
 	version = false, -- Never set this value to "*"! Never!
 	opts = {
 		provider = "bothub-claude-3.5-haiku",
-        cursor_applying_provider = "bothub-gemini-2.0-flash-001",
+        cursor_applying_provider = "bothub-llama-3.1-70b-instruct",
         behaviour = {
             enable_cursor_planning_module = true,
         },
@@ -13,6 +13,30 @@ return {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "claude-3.5-haiku",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-claude-3.7-sonnet"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "claude-3.7-sonnet",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-claude-3.7-sonnet:thinking"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "claude-3.7-sonnet:thinking",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-llama-4-maverick"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "llama-4-maverick",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-llama-3.1-70b-instruct"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "llama-3.1-70b-instruct",
                 api_key_name = "BOTHUB_API_KEY",
             },
             ["bothub-deepseek-r1"] = {
@@ -37,6 +61,12 @@ return {
                 __inherited_from = "openai",
                 endpoint = "https://bothub.chat/api/v2/openai/v1",
                 model = "gemini-2.5-pro-preview-03-25",
+                api_key_name = "BOTHUB_API_KEY",
+            },
+            ["bothub-llama-3.1-405b-instruct"] = {
+                __inherited_from = "openai",
+                endpoint = "https://bothub.chat/api/v2/openai/v1",
+                model = "llama-3.1-405b-instruct",
                 api_key_name = "BOTHUB_API_KEY",
             },
             ["ntech-qwen2.5-coder-32b-instruct"] = {

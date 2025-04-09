@@ -48,7 +48,7 @@ return {
 					schema = {
 						model = {
 							default = "claude-3.5-haiku", -- define llm model to be used
-							choices = { "claude-3.5-haiku", "claude-3.5-sonnet", "claude-3.7-sonnet" }, -- define llm model to be used
+							choices = { "claude-3.5-haiku", "claude-3.5-sonnet", "claude-3.7-sonnet", "claude-3.7-sonnet:thinking" }, -- define llm model to be used
 						},
 					},
 				})
@@ -90,10 +90,27 @@ return {
 					},
 				})
 			end,
-			["ntech/qwen2.5-Coder-32B-Instruct"] = function()
+			llama = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
-					name = "ntech/qwen2.5-Coder-32B-Instruct",
-					formatted_name = "NTech/Qwen2.5-Coder-32B-Instruct",
+					name = "deepseek",
+					formatted_name = "BotHubDeepseek",
+					env = {
+						url = "https://bothub.chat/api/v2/openai",
+						chat_url = "/v1/chat/completions",
+						api_key = "cmd: cat ~/.config/openai_key",
+					},
+					schema = {
+						model = {
+							default = "llama-4-maverick", -- define llm model to be used
+							choices = { "llama-4-maverick", "llama-3.1-70b-instruct", "llama-3.1-450b-instruct" }, -- define llm model to be used
+						},
+					},
+				})
+			end,
+			["ntech/qwen2.5-coder-32b-instruct"] = function()
+				return require("codecompanion.adapters").extend("openai_compatible", {
+					name = "ntech/qwen2.5-coder-32b-instruct",
+					formatted_name = "ntech/qwen2.5-coder-32b-instruct",
 					env = {
 						url = "https://llm-code.ntechlab.ru:36502",
 						chat_url = "/v1/chat/completions",
@@ -101,8 +118,8 @@ return {
 					},
 					schema = {
 						model = {
-							default = "Qwen/Qwen2.5-Coder-32B-Instruct", -- define llm model to be used
-							choices = { "Qwen/Qwen2.5-Coder-32B-Instruct" }, -- define llm model to be used
+							default = "qwen/qwen2.5-coder-32b-instruct", -- define llm model to be used
+							choices = { "qwen/qwen2.5-coder-32b-instruct" }, -- define llm model to be used
 						},
 					},
 				})
@@ -110,7 +127,7 @@ return {
 			["ntech/qwen-2.5-72b-instruct"] = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					name = "ntech/qwen-2.5-72b-instruct",
-					formatted_name = "Ntech/Qwen2.5-72B-Instruct",
+					formatted_name = "ntech/qwen2.5-72b-instruct",
 					env = {
 						url = "https://llm-common.ntechlab.ru:36507",
 						chat_url = "/v1/chat/completions",
@@ -118,8 +135,8 @@ return {
 					},
 					schema = {
 						model = {
-							default = "Qwen/Qwen2.5-72B-Instruct", -- define llm model to be used
-							choices = { "Qwen/Qwen2.5-72B-Instruct" }, -- define llm model to be used
+							default = "qwen/qwen2.5-72b-instruct", -- define llm model to be used
+							choices = { "qwen/qwen2.5-72b-instruct" }, -- define llm model to be used
 						},
 					},
 				})
