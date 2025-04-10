@@ -2,9 +2,12 @@ return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
-	opts = {
-		provider = "bothub-claude-3.5-haiku",
-		cursor_applying_provider = "bothub-llama-3.1-70b-instruct",
+opts = {
+    windows = {
+        width = 40, -- 
+    },
+	provider = "bothub-claude-3.5-haiku",
+	cursor_applying_provider = "bothub-llama-3.1-70b-instruct",
 
 		system_prompt = function()
 			local hub = require("mcphub").get_hub_instance()

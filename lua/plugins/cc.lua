@@ -107,7 +107,7 @@ return {
 					schema = {
 						model = {
 							default = "llama-4-maverick", -- define llm model to be used
-							choices = { "llama-4-maverick", "llama-3.1-70b-instruct", "llama-3.1-450b-instruct" }, -- define llm model to be used
+							choices = { "llama-4-maverick", "llama-3.1-70b-instruct", "llama-3.1-405b-instruct" }, -- define llm model to be used
 						},
 					},
 				})
@@ -123,8 +123,7 @@ return {
 					},
 					schema = {
 						model = {
-							default = "qwen/qwen2.5-coder-32b-instruct", -- define llm model to be used
-							choices = { "qwen/qwen2.5-coder-32b-instruct" }, -- define llm model to be used
+							default = "Qwen/Qwen2.5-Coder-32B-Instruct", -- define llm model to be used
 						},
 					},
 				})
@@ -140,8 +139,7 @@ return {
 					},
 					schema = {
 						model = {
-							default = "qwen/qwen2.5-72b-instruct", -- define llm model to be used
-							choices = { "qwen/qwen2.5-72b-instruct" }, -- define llm model to be used
+							default = "Qwen/Qwen2.5-72B-Instruct", -- define llm model to be used
 						},
 					},
 				})
