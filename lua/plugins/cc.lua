@@ -54,7 +54,7 @@ return {
 						end,
 						opts = {
 							required_approval = true,
-							temperature = 0.7,
+							temperature = 0.2,
 						},
 						description = "Call tools and resources from the MCP Servers",
 					},
