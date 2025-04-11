@@ -2,12 +2,15 @@ return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
-opts = {
-    windows = {
-        width = 40, -- 
-    },
-	provider = "bothub-claude-3.5-haiku",
-	cursor_applying_provider = "bothub-llama-3.1-70b-instruct",
+	opts = {
+		windows = {
+			width = 40, --
+		},
+		provider = "bothub-claude-3.5-haiku",
+		cursor_applying_provider = "bothub-llama-3.1-70b-instruct",
+		behaviour = {
+			enable_cursor_planning_module = true,
+		},
 
 		system_prompt = function()
 			local hub = require("mcphub").get_hub_instance()
@@ -20,22 +23,6 @@ opts = {
 			}
 		end,
 
-		disabled_tools = {
-			"list_files", -- Built-in file operations
-			"search_files",
-			"read_file",
-			"create_file",
-			"rename_file",
-			"delete_file",
-			"create_dir",
-			"rename_dir",
-			"delete_dir",
-			"bash", -- Built-in terminal access
-		},
-
-		behaviour = {
-			enable_cursor_planning_module = true,
-		},
 		vendors = {
 			["bothub-claude-3.5-haiku"] = {
 				__inherited_from = "openai",
@@ -95,6 +82,12 @@ opts = {
 				__inherited_from = "openai",
 				endpoint = "https://bothub.chat/api/v2/openai/v1",
 				model = "llama-3.1-405b-instruct",
+				api_key_name = "BOTHUB_API_KEY",
+			},
+			["bothub-optimus-alpha"] = {
+				__inherited_from = "openai",
+				endpoint = "https://bothub.chat/api/v2/openai/v1",
+				model = "optimus-alpha",
 				api_key_name = "BOTHUB_API_KEY",
 			},
 			["ntech-qwen2.5-coder-32b-instruct"] = {
