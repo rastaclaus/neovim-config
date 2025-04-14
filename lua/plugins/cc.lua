@@ -47,18 +47,6 @@ return {
 		strategies = {
 			chat = {
 				adapter = "bothub",
-				tools = {
-					["mcp"] = {
-						callback = function()
-							return require("mcphub.extensions.codecompanion")
-						end,
-						opts = {
-							required_approval = true,
-							temperature = 0.2,
-						},
-						description = "Call tools and resources from the MCP Servers",
-					},
-				},
 			},
 			inline = {
 				adapter = "bothub",
