@@ -19,5 +19,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.showmatch = true
 vim.opt.incsearch = true
+
+--настройки форматирования
 vim.wo.number = true
 vim.wo.wrap = false
