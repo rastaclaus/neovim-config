@@ -12,8 +12,6 @@ vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "->", trail = "-" }
 vim.opt.splitright = true
-vim.opt.textwidth = 120
-vim.opt.wrap = false
 vim.opt.statuscolumn = ""
 
 --настройки поиска

@@ -38,7 +38,7 @@ return {
 					},
 					schema = {
 						model = {
-							default = "claude-3.7-sonnet", -- define llm model to be used
+							default = "gpt-4.1-mini", -- define llm model to be used
 						},
 					},
 				})
