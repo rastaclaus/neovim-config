@@ -4,6 +4,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 -- vim.g.python3_host_prog = home .. '/.pyenv/versions/neovim3/bin/python'
 --настройки копирования
+vim.g.clipboard = 'osc52'
+
+
 vim.opt.clipboard = "unnamedplus"
 
 --настройки табуляции
