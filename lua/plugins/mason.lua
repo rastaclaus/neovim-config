@@ -54,7 +54,7 @@ return {
 				lspconfig["ruff"].setup({
 					init_options = {
 						settings = {
-							configuration = "~/.ruff.toml",
+							configuration = os.getenv("HOME") .. ".ruff.toml",
 							configurationPreference = "filesystemFirst",
 						},
 					},
