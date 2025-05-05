@@ -28,6 +28,22 @@ return {
 					},
 				})
 			end,
+			["ntech"] = function()
+				return require("codecompanion.adapters").extend("openai_compatible", {
+					name = "ntech",
+					formatted_name = "NTech",
+					env = {
+						url = "http://p2.msk-1.hpc-park.ru:36503",
+						api_key = "cmd: cat ~/.config/ntech_key",
+						chat_url = "/v1/chat/completions",
+					},
+					schema = {
+						model = {
+							default = "Qwen/Qwen3-32B", -- define llm model to be used
+						},
+					},
+				})
+			end,
 		},
 		strategies = {
 			chat = {
