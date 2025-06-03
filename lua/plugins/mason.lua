@@ -12,7 +12,7 @@ return {
 			automatic_enable = {
 				exclude = {
 					"ruff",
-					"basedpyright",
+					-- "basedpyright",
 				},
 			},
 		})
@@ -20,18 +20,19 @@ return {
 			ensure_installed = {
 				"lua-language-server",
 				"stylua",
-				"basedpyright",
+				-- "basedpyright",
 				"ruff",
 				"json-lsp",
 				"jq",
 				"yaml-language-server",
 				"yamlfix",
+                "ty",
 			},
 		})
 
-		lspconfig.basedpyright.setup({
-			single_file_support = true,
-		})
+		-- lspconfig.basedpyright.setup({
+		-- 	single_file_support = true,
+		-- })
 
 		lspconfig.ruff.setup({
 			init_options = {
