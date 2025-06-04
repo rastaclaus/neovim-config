@@ -12,7 +12,7 @@ return {
 			automatic_enable = {
 				exclude = {
 					"ruff",
-					"basedpyright",
+					-- "basedpyright",
 				},
 			},
 		})
@@ -20,7 +20,7 @@ return {
 			ensure_installed = {
 				"lua-language-server",
 				"stylua",
-				"basedpyright",
+				-- "basedpyright",
 				"ruff",
 				"json-lsp",
 				"jq",
@@ -29,16 +29,16 @@ return {
 			},
 		})
 
-		lspconfig.basedpyright.setup({
-			settings = {
-				basedpyright = {
-					analysis = {
-						typeCheckingMode = "strict",
-						-- ignore = { "*" },
-					},
-				},
-			},
-		})
+		-- lspconfig.basedpyright.setup({
+		-- 	settings = {
+		-- 		basedpyright = {
+		-- 			analysis = {
+		-- 				typeCheckingMode = "strict",
+		-- 				-- ignore = { "*" },
+		-- 			},
+		-- 		},
+		-- 	},
+		-- })
 
 		lspconfig.ruff.setup({
 			init_options = {
