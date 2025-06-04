@@ -7,7 +7,7 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
-		require("mason").setup({})
+		require("mason").setup()
 		require("mason-lspconfig").setup({
 			automatic_enable = {
 				exclude = {
@@ -30,13 +30,20 @@ return {
 		})
 
 		lspconfig.basedpyright.setup({
-			single_file_support = true,
+			settings = {
+				basedpyright = {
+					analysis = {
+						typeCheckingMode = "strict",
+						-- ignore = { "*" },
+					},
+				},
+			},
 		})
 
 		lspconfig.ruff.setup({
 			init_options = {
 				settings = {
-					configuration = os.getenv("HOME") .. ".ruff.toml",
+					configuration = os.getenv("HOME") .. "/.ruff.toml",
 					configurationPreference = "filesystemFirst",
 				},
 			},
