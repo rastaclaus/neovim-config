@@ -26,6 +26,7 @@ return {
 				"jq",
 				"yaml-language-server",
 				"yamlfix",
+                "gopls",
 			},
 		})
 
@@ -48,5 +49,8 @@ return {
 				},
 			},
 		})
+        lspconfig.gopls.setup({
+            root_dir = lspconfig.util.root_pattern("go.mod", ".git")
+        })
 	end,
 }
