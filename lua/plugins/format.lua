@@ -37,7 +37,15 @@ return {
 			-- 	timeout_ms = 500,
 			-- },
 		})
-
+		conform.formatters.ruff_format = {
+			prepend_args = { "--config", "~/.ruff.toml" },
+		}
+		conform.formatters.ruff_fix = {
+			prepend_args = { "--config", "~/.ruff.toml" },
+		}
+		conform.formatters.ruff_organize_imports = {
+			prepend_args = { "--config", "~/.ruff.toml" },
+		}
 		vim.keymap.set({ "v" }, "<leader>f", format, { desc = "Format range (in visual mode)" })
 		vim.keymap.set({ "n" }, "<F5>", format, { desc = "Format file" })
 	end,

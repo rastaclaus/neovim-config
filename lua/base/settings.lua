@@ -28,4 +28,4 @@ vim.opt.incsearch = true
 --настройки форматирования
 vim.wo.number = true
 vim.wo.wrap = false
-vim.opt.textwidth = 120
+-- vim.opt.textwidth = 120
