@@ -8,5 +8,6 @@ return {
 		require("mini.surround").setup()
 		require("mini.comment").setup()
 		require("mini.snippets").setup()
+        require("mini.completion").setup()
 	end,
 }
