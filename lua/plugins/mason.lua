@@ -6,42 +6,21 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		require("mason").setup()
-		require("mason-lspconfig").setup({
-			automatic_enable = {
-				exclude = {
-					"ruff",
-					-- "basedpyright",
-				},
-			},
-		})
+		require("mason-lspconfig").setup({})
 		require("mason-tool-installer").setup({
 			ensure_installed = {
 				"lua-language-server",
-				"stylua",
-				-- "basedpyright",
 				"ruff",
+				"stylua",
 				"json-lsp",
 				"jq",
 				"yaml-language-server",
 				"yamlfix",
-                "gopls",
+				"gopls",
 			},
 		})
-
-		-- lspconfig.basedpyright.setup({
-		-- 	settings = {
-		-- 		basedpyright = {
-		-- 			analysis = {
-		-- 				typeCheckingMode = "strict",
-		-- 				-- ignore = { "*" },
-		-- 			},
-		-- 		},
-		-- 	},
-		-- })
-
-		lspconfig.ruff.setup({
+		vim.lsp.config("ruff", {
 			init_options = {
 				settings = {
 					configuration = os.getenv("HOME") .. "/.ruff.toml",
@@ -49,8 +28,19 @@ return {
 				},
 			},
 		})
-        lspconfig.gopls.setup({
-            root_dir = lspconfig.util.root_pattern("go.mod", ".git")
-        })
+		vim.lsp.config("pylsp", {
+			init_options = {
+				pylsp = {
+					plugins = {
+						pycodestyle = {
+							maxLineLength = 120,
+						},
+					},
+				},
+			},
+		})
+		vim.lsp.config("gopls", {
+			-- root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
+		})
 	end,
 }
