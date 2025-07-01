@@ -6,7 +6,7 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
-        local lspconfig = require("lspconfi")
+        local lspconfig = require("lspconfig")
 		require("mason").setup()
 		require("mason-lspconfig").setup({})
 		require("mason-tool-installer").setup({
