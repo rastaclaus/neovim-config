@@ -6,6 +6,7 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
+        local lspconfig = require("lspconfi")
 		require("mason").setup()
 		require("mason-lspconfig").setup({})
 		require("mason-tool-installer").setup({
@@ -39,8 +40,15 @@ return {
 				},
 			},
 		})
+        vim.lsp.config("ty", {
+            init_options = {
+                settings = {
+                    disableLanguageServices = true,
+                }
+            }
+        })
 		vim.lsp.config("gopls", {
-			-- root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
+			root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
 		})
 	end,
 }
