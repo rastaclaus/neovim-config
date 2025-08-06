@@ -1,0 +1,5 @@
+require("options")
+require("plugins.install")
+require("lsp_config")
+require("colors")
+require("keymap")
