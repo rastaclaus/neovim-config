@@ -18,6 +18,7 @@ vim.pack.add({
 	 	src = "https://github.com/saghen/blink.cmp",
 	 	version = vim.version.range("1")
 	 },
+	 { src = "https://github.com/rcarriga/nvim-notify"}
 })
 
 require("mason").setup()
@@ -26,3 +27,4 @@ require("which-key").setup()
 require("plugins.conform_setup")
 require("vague").setup({ transparent = true })
 require("plugins.blink_cmp_setup")
+require("plugins.treesitter_setup")
