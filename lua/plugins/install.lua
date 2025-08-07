@@ -25,6 +25,7 @@ vim.pack.add({
 		 src = "https://github.com/Kurama622/llm.nvim",
 		 cmd = {"LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler"},
 	 },
+	 { src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
 require("mason").setup()
