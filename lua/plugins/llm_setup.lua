@@ -3,18 +3,18 @@ require("llm").setup({
 	prompt = "You are a professional programmer.",
 	models = {
 		{
-			name = "GPT-4.1-mini",
+			name = "GPT-5-nano",
 			url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-			model = "gpt-4.1-mini",
+			model = "gpt-5-nano",
 			api_type = "openai",
 			fetch_key = function()
 				return vim.env.BOTHUB_API_KEY
 			end,
 		},
 		{
-			name = "GPT-4.1",
+			name = "GPT-5",
 			url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-			model = "gpt-4.1",
+			model = "gpt-5",
 			api_type = "openai",
 			fetch_key = function()
 				return vim.env.BOTHUB_API_KEY
@@ -38,7 +38,7 @@ require("llm").setup({
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-4.1",
+				model = "gpt-5",
 				api_type = "openai",
 				language = "Russian",
 			},
@@ -52,7 +52,7 @@ require("llm").setup({
 				end,
 				enter_flexible_window = true,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-4.1",
+				model = "gpt-5",
 				api_type = "openai",
 				language = "Russian",
 			},
@@ -88,7 +88,7 @@ NOTE:
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-4.1-mini",
+				model = "gpt-5-nano",
 				api_type = "openai",
 			},
 		},
@@ -106,7 +106,7 @@ NOTE:
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-4.1-mini",
+				model = "gpt-5-nano",
 				api_type = "openai",
 			},
 		},
