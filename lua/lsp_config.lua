@@ -1,4 +1,3 @@
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls" })
 -- vim.api.nvim_create_autocmd("LspAttach", {
 -- 	callback = function(ev)
 -- 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -8,3 +7,4 @@ vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls" }
 -- 	end,
 -- })
 vim.cmd("set completeopt+=noselect")
+vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls" })
