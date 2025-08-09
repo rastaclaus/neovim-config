@@ -7,4 +7,4 @@
 -- 	end,
 -- })
 vim.cmd("set completeopt+=noselect")
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls" })
+vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls", "docker_compose_language_service", "docker_language_server" })

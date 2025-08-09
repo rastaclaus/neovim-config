@@ -1,6 +1,7 @@
 vim.pack.add({
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
+	{ src = "https://github.com/benomahony/oil-git.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	{ src = "https://github.com/folke/which-key.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
@@ -19,14 +20,14 @@ vim.pack.add({
 	},
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
-	{ src =  "https://github.com/neovim/nvim-lspconfig" },
+	{ src = "https://github.com/neovim/nvim-lspconfig" },
 })
 
 require("plugins.treesitter_setup")
 require("plugins.conform_setup")
 require("plugins.blink_cmp_setup")
 require("fzf-lua").setup()
-require("oil").setup()
+require("plugins.oil_setup")
 require("supermaven-nvim").setup({})
 require("plugins.llm_setup")
 require("which-key").setup()

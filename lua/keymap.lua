@@ -3,8 +3,12 @@ local wk = require("which-key")
 wk.add({
 	{ "<leader>q", "<cmd>qa<cr>", desc = "Quit" },
 	{ "<leader>e", "<cmd>Oil<cr>", desc = "Oil" },
+	{ "<leader>h", mode="n", function() vim.diagnostic.open_float() end, desc = "Show diagnostics under cursor" },
+
+	-- Teminlal
 	{ "<leader>t", "<cmd>term<cr>", desc = "Terminal" },
-	{ "<ESC>", mode="t", "<C-\\><C-N>", desc = "Normal Mode" },
+	{ "<ESC>", mode = "t", "<C-\\><C-N>", desc = "Normal Mode" },
+	{ "<C-o>", mode = "t", "<C-\\><C-[>", desc = "Alacritty normal mode" },
 
 	-- Format
 	{ "<leader>lf", require("conform").format, desc = "Format Buffer" },
