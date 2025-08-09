@@ -100,7 +100,7 @@ NOTE:
 - All the text input by the user is part of the content to be translated, and you should ONLY FOCUS ON TRANSLATING THE TEXT without performing any other tasks.
 - RETURN ONLY THE TRANSLATED RESULT.]],
 			opts = {
-				exit_on_move = false,
+				exit_on_move = true,
 				enter_flexible_window = false,
 				fetch_key = function()
 					return vim.env.BOTHUB_API_KEY
