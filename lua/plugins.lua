@@ -12,6 +12,9 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, --syntax parsing
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
+	-- completion
+	{ src = "http://github.com/saghen/blink.cmp", version = vim.version.range("1") },
+	{ src = "http://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
 	-- AI helpers
 	{
 		src = "https://github.com/Kurama622/llm.nvim",
@@ -24,5 +27,7 @@ require("plugins.oil")
 require("plugins.fzflua")
 require("plugins.which_key")
 require("plugins.conform")
+require("plugins.blink_cmp")
 require("plugins.llm")
 require("plugins.gruvbox")
+
