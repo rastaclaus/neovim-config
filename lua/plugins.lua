@@ -7,19 +7,17 @@ vim.pack.add({
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
 	-- AI helpers
-	{ src = "https://github.com/supermaven-inc/supermaven-nvim" }, -- dependency of llm
 	{ src = "https://github.com/nvim-lua/plenary.nvim" }, -- dependency of llm
-	{ src = "https://github.com/MunifTanjim/nui.nvim" },
+	{ src = "https://github.com/MunifTanjim/nui.nvim" }, -- dependency of llm
 	{
 		src = "https://github.com/Kurama622/llm.nvim",
-		cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" },
+		cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" }, --llm tools
 	},
 })
 
 require("plugins.treesitter")
 require("plugins.oil")
 require("plugins.which_key")
-require("plugins.gruvbox")
 require("plugins.conform")
-require("supermaven-nvim").setup({})
 require("plugins.llm")
+require("plugins.gruvbox")
