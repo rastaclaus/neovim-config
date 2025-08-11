@@ -51,14 +51,14 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Auto-close terminal when process exits
-vim.api.nvim_create_autocmd("TermClose", {
-	group = augroup,
-	callback = function()
-		if vim.v.event.status == 0 then
-			vim.api.nvim_buf_delete(0, {})
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("TermClose", {
+-- 	group = augroup,
+-- 	callback = function()
+-- 		if vim.v.event.status == 0 then
+-- 			vim.api.nvim_buf_delete(0, {})
+-- 		end
+-- 	end,
+-- })
 
 -- Auto-resize splits when window is resized
 vim.api.nvim_create_autocmd("VimResized", {
