@@ -7,6 +7,8 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 	-- colorschemes
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
+	{ src = "https://github.com/catppuccin/nvim" }, -- colorscheme
+
 	{ src = "https://github.com/stevearc/oil.nvim" }, -- file manager
 	{ src = "https://github.com/refractalize/oil-git-status.nvim" }, -- git status for oil
 	{ src = "https://github.com/stevearc/conform.nvim" },  -- formatting
@@ -30,5 +32,5 @@ require("plugins.which_key")
 require("plugins.conform")
 require("plugins.blink_cmp")
 require("plugins.llm")
-require("plugins.gruvbox")
 
+require("plugins.colorschemes")
