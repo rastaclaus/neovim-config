@@ -8,6 +8,7 @@ vim.pack.add({
 	-- colorschemes
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
 	{ src = "https://github.com/stevearc/oil.nvim" }, -- file manager
+	{ src = "https://github.com/refractalize/oil-git-status.nvim" }, -- git status for oil
 	{ src = "https://github.com/stevearc/conform.nvim" },  -- formatting
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, --syntax parsing
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions

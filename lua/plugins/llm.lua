@@ -129,7 +129,7 @@ You must:
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-5-nano",
+				model = "gpt-4.1",
 				api_type = "openai",
 				only_display_diff = true,
 				templates = {
