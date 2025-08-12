@@ -119,17 +119,16 @@ Your core tasks include:
 - any errors that might be raised or returned, depending on the language.
 
 You must:
-- Place the generated docstring depending on the programming language.
+- Place the generated docstring in place, depending on the used programming language.
 - Follow the format of examples carefully if the examples are provided.
-- Use Markdown formatting in your answers.
-- Include the programming language name at the start of the Markdown code blocks.]],
+- Use Markdown formatting in your answers.]],
 			handler = tools.action_handler,
 			opts = {
 				fetch_key = function()
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-4.1",
+				model = "gpt-5-mini",
 				api_type = "openai",
 				only_display_diff = true,
 				templates = {
@@ -145,8 +144,8 @@ You must:
 
 -- llm keys
 vim.keymap.set("n", "<leader>ac", "<cmd>LLMSessionToggle<cr>", { desc = " Toggle LLM Session" })
-vim.keymap.set("x", "<leader>ao", "<cmd>LLMAppHandler OptimCompare<cr>", { desc = " Optimize the Code" })
+-- vim.keymap.set("x", "<leader>ao", "<cmd>LLMAppHandler OptimCompare<cr>", { desc = " Optimize the Code" })
 vim.keymap.set("x", "<leader>ae", "<cmd>LLMAppHandler CodeExplain<cr>", { desc = " Explain the Code" })
 vim.keymap.set("n", "<leader>ts", "<cmd>LLMAppHandler Translate<cr>", { desc = " Translate Tool" })
 vim.keymap.set("x", "<leader>tt", "<cmd>LLMAppHandler WordTranslate<cr>", { desc = " Translate Text" })
-vim.keymap.set("x", "<leader>ad", "<cmd>LLMAppHandler DocString<cr>", { desc = " Docstring for selected" })
+-- vim.keymap.set("x", "<leader>ad", "<cmd>LLMAppHandler DocString<cr>", { desc = " Docstring for selected" })
