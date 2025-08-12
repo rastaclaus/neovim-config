@@ -1,3 +1,4 @@
+local detail
 require("oil").setup({
 	keymaps = {
 		["gd"] = {
@@ -16,4 +17,6 @@ require("oil").setup({
 		signcolumn = "yes:2",
 	},
 })
-require("oil-git-status").setup({})
+require("oil-git-status").setup({
+	show_ignored=true
+})
