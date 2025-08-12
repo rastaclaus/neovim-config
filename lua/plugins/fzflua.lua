@@ -1,5 +1,5 @@
 require('fzf-lua').setup({})
-vim.cmd("FzfLua register_ui_select")
+-- vim.cmd("FzfLua register_ui_select")
 
 vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>", { desc = "Find file" })
 vim.keymap.set("n", "<leader>fg", ":FzfLua grep_project<CR>", { desc = "Grep project" })
