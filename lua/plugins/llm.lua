@@ -130,7 +130,7 @@ You must:
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
 				model = "gpt-5-mini",
 				api_type = "openai",
-				only_display_diff = true,
+				only_display_diff = false,
 				templates = {
 					lua = [[- For the Lua language, you should use the LDoc style.
 - Start all comment lines with "---".
@@ -144,8 +144,8 @@ You must:
 
 -- llm keys
 vim.keymap.set("n", "<leader>ac", "<cmd>LLMSessionToggle<cr>", { desc = " Toggle LLM Session" })
--- vim.keymap.set("x", "<leader>ao", "<cmd>LLMAppHandler OptimCompare<cr>", { desc = " Optimize the Code" })
+vim.keymap.set("x", "<leader>ao", "<cmd>LLMAppHandler OptimCompare<cr>", { desc = " Optimize the Code" })
 vim.keymap.set("x", "<leader>ae", "<cmd>LLMAppHandler CodeExplain<cr>", { desc = " Explain the Code" })
 vim.keymap.set("n", "<leader>ts", "<cmd>LLMAppHandler Translate<cr>", { desc = " Translate Tool" })
 vim.keymap.set("x", "<leader>tt", "<cmd>LLMAppHandler WordTranslate<cr>", { desc = " Translate Text" })
--- vim.keymap.set("x", "<leader>ad", "<cmd>LLMAppHandler DocString<cr>", { desc = " Docstring for selected" })
+vim.keymap.set("x", "<leader>ad", "<cmd>LLMAppHandler DocString<cr>", { desc = " Docstring for selected" })
