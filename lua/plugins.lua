@@ -1,23 +1,29 @@
 vim.pack.add({
-	-- dependencies
+	-- Dependencies
 	{ src = "https://github.com/nvim-lua/plenary.nvim" }, -- dependency
 	{ src = "https://github.com/MunifTanjim/nui.nvim" }, -- dependency
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- dependency
+
 	-- https://github.com/ibhagwan/fzf-lua
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
-	-- colorschemes
+
+	-- Colorschemes
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
 	{ src = "https://github.com/catppuccin/nvim" }, -- colorscheme
 
+	-- Oil
 	{ src = "https://github.com/stevearc/oil.nvim" }, -- file manager
-	{ src = "https://github.com/refractalize/oil-git-status.nvim" }, -- git status for oil
+
+	-- Helpers
 	{ src = "https://github.com/stevearc/conform.nvim" },  -- formatting
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, --syntax parsing
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
-	-- completion
+
+	-- Completion
 	{ src = "http://github.com/saghen/blink.cmp", version = vim.version.range("1") },
 	{ src = "http://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
+
 	-- AI helpers
 	{
 		src = "https://github.com/Kurama622/llm.nvim",

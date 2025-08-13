@@ -13,10 +13,4 @@ require("oil").setup({
 			end,
 		},
 	},
-	win_options = {
-		signcolumn = "yes:2",
-	},
-})
-require("oil-git-status").setup({
-	show_ignored=true
 })
