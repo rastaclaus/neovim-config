@@ -15,10 +15,14 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim" }, -- file manager
 
 	-- Helpers
-	{ src = "https://github.com/stevearc/conform.nvim" },  -- formatting
+	{ src = "https://github.com/stevearc/conform.nvim" }, -- formatting
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, --syntax parsing
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
+
+	-- NeoGit
+	{ src = "https://github.com/sindrets/diffview.nvim" }, -- for Diff integration
+	{ src = "https://github.com/NeogitOrg/neogit" }, -- NeoGit tools
 
 	-- Completion
 	{ src = "http://github.com/saghen/blink.cmp", version = vim.version.range("1") },
@@ -32,6 +36,7 @@ vim.pack.add({
 })
 
 require("plugins.treesitter")
+require("neogit").setup({})
 require("plugins.oil")
 require("plugins.fzflua")
 require("plugins.which_key")
