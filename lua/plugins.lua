@@ -36,7 +36,7 @@ vim.pack.add({
 })
 
 require("plugins.treesitter")
-require("neogit").setup({})
+require("plugins.neogit")
 require("plugins.oil")
 require("plugins.fzflua")
 require("plugins.which_key")
