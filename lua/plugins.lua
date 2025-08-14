@@ -8,6 +8,7 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 
 	-- Colorschemes
+	{ src = "https://github.com/ellisonleao/gruvbox.nvim" }, -- colorscheme
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
 	{ src = "https://github.com/catppuccin/nvim" }, -- colorscheme
 
