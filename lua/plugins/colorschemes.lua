@@ -1,6 +1,5 @@
-require("bamboo").setup({
-
-})
+require("bamboo").setup({})
+require("gruvbox-material").setup({})
 require("transparent").setup({})
 vim.keymap.set("n", "<leader>bt", "<cmd>TransparentToggle<CR>", {noremap=true, desc="Transparency toggle"})
-vim.cmd.colorscheme("bamboo")
+vim.cmd.colorscheme("gruvbox-material")
