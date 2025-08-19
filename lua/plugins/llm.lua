@@ -14,7 +14,7 @@ require("llm").setup({
 		{
 			name = "GPT-5",
 			url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-			model = "gpt-5",
+			model = "gpt-5-mini",
 			api_type = "openai",
 			fetch_key = function()
 				return vim.env.BOTHUB_API_KEY
@@ -38,7 +38,7 @@ require("llm").setup({
 					return vim.env.BOTHUB_API_KEY
 				end,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-5",
+				model = "gemini-2.5-pro-preview",
 				api_type = "openai",
 				language = "Russian",
 			},
@@ -52,7 +52,7 @@ require("llm").setup({
 				end,
 				enter_flexible_window = true,
 				url = "https://bothub.chat/api/v2/openai/v1/chat/completions",
-				model = "gpt-5",
+				model = "gemini-2.5-pro-preview",
 				api_type = "openai",
 				language = "Russian",
 			},
