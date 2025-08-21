@@ -22,6 +22,9 @@ vim.pack.add({
 	-- Completion
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1") },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
+
+	-- AI
+	{ src = "https://github.com/robitx/gp.nvim"}
 })
 
 require("plugins.treesitter")
@@ -30,5 +33,6 @@ require("plugins.fzflua")
 require("plugins.which_key")
 require("plugins.conform")
 require("plugins.blink_cmp")
+require("plugins.gp")
 
 require("plugins.colorschemes")
