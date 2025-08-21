@@ -1,7 +1,5 @@
 vim.pack.add({
 	-- Dependencies
-	{ src = "https://github.com/nvim-lua/plenary.nvim" }, -- dependency
-	{ src = "https://github.com/MunifTanjim/nui.nvim" }, -- dependency
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- dependency
 
 	-- https://github.com/ibhagwan/fzf-lua
@@ -21,28 +19,16 @@ vim.pack.add({
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
 
-	-- NeoGit
-	{ src = "https://github.com/sindrets/diffview.nvim" }, -- for Diff integration
-	{ src = "https://github.com/NeogitOrg/neogit" }, -- NeoGit tools
-
 	-- Completion
 	{ src = "http://github.com/saghen/blink.cmp", version = vim.version.range("1") },
 	{ src = "http://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
-
-	-- AI helpers
-	{
-		src = "https://github.com/Kurama622/llm.nvim",
-		cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" }, --llm tools
-	},
 })
 
 require("plugins.treesitter")
-require("plugins.neogit")
 require("plugins.oil")
 require("plugins.fzflua")
 require("plugins.which_key")
 require("plugins.conform")
 require("plugins.blink_cmp")
-require("plugins.llm")
 
 require("plugins.colorschemes")
