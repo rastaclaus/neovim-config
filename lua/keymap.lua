@@ -1,6 +1,6 @@
 -- Leader key
-vim.g.mapleader = " "                              -- Set leader key to space
-vim.g.maplocalleader = " "                         -- Set local leader key (NEW)
+vim.g.mapleader = " " -- Set leader key to space
+vim.g.maplocalleader = " " -- Set local leader key (NEW)
 
 -- Buffer navigation
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
@@ -31,7 +31,6 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Quick file navigation
-vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Open file explorer" })
 vim.keymap.set("n", "<leader>rc", ":e ~/.config/nvim/init.lua<CR>", { desc = "Edit config" })
 
 -- Copy Full File-Path
@@ -44,62 +43,69 @@ end)
 -- Terminal keymap
 vim.keymap.set("n", "<leader>tt", ":term<CR>", { noremap = true, silent = true, desc = "Toggle terminal" })
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-N>", { noremap = true, silent = true, desc = "Term normal mode" })
-vim.keymap.set("t", "<C-o>",  "<C-\\><C-[>", {desc = "Alacritty normal mode"})
+vim.keymap.set("t", "<C-o>", "<C-\\><C-[>", { desc = "Alacritty normal mode" })
 
 -- Tabs keymap
-vim.keymap.set('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab' })
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', { desc = 'Close tab' })
-vim.keymap.set('n', '<leader>tm', ':tabmove<CR>', { desc = 'Move tab' })
-vim.keymap.set('n', '<leader>t>', ':tabmove +1<CR>', { desc = 'Move tab right' })
-vim.keymap.set('n', '<leader>t<', ':tabmove -1<CR>', { desc = 'Move tab left' })
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New tab" })
+vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>tm", ":tabmove<CR>", { desc = "Move tab" })
+vim.keymap.set("n", "<leader>t>", ":tabmove +1<CR>", { desc = "Move tab right" })
+vim.keymap.set("n", "<leader>t<", ":tabmove -1<CR>", { desc = "Move tab left" })
+
 -- Function to open file in new tab
 local function open_file_in_tab()
-  vim.ui.input({ prompt = 'File to open in new tab: ', completion = 'file' }, function(input)
-    if input and input ~= '' then
-      vim.cmd('tabnew ' .. input)
-    end
-  end)
+	vim.ui.input({ prompt = "File to open in new tab: ", completion = "file" }, function(input)
+		if input and input ~= "" then
+			vim.cmd("tabnew " .. input)
+		end
+	end)
 end
 
 -- Function to duplicate current tab
 local function duplicate_tab()
-  local current_file = vim.fn.expand('%:p')
-  if current_file ~= '' then
-    vim.cmd('tabnew ' .. current_file)
-  else
-    vim.cmd('tabnew')
-  end
+	local current_file = vim.fn.expand("%:p")
+	if current_file ~= "" then
+		vim.cmd("tabnew " .. current_file)
+	else
+		vim.cmd("tabnew")
+	end
 end
 
 -- Function to close tabs to the right
 local function close_tabs_right()
-  local current_tab = vim.fn.tabpagenr()
-  local last_tab = vim.fn.tabpagenr('$')
+	local current_tab = vim.fn.tabpagenr()
+	local last_tab = vim.fn.tabpagenr("$")
 
-  for i = last_tab, current_tab + 1, -1 do
-    vim.cmd(i .. 'tabclose')
-  end
+	for i = last_tab, current_tab + 1, -1 do
+		vim.cmd(i .. "tabclose")
+	end
 end
 
 -- Function to close tabs to the left
 local function close_tabs_left()
-  local current_tab = vim.fn.tabpagenr()
+	local current_tab = vim.fn.tabpagenr()
 
-  for i = current_tab - 1, 1, -1 do
-    vim.cmd('1tabclose')
-  end
+	for i = current_tab - 1, 1, -1 do
+		vim.cmd("1tabclose")
+	end
 end
 
-vim.keymap.set('n', '<leader>tO', open_file_in_tab, { desc = 'Open file in new tab' })
-vim.keymap.set('n', '<leader>td', duplicate_tab, { desc = 'Duplicate current tab' })
-vim.keymap.set('n', '<leader>tr', close_tabs_right, { desc = 'Close tabs to the right' })
-vim.keymap.set('n', '<leader>tL', close_tabs_left, { desc = 'Close tabs to the left' })
+vim.keymap.set("n", "<leader>tO", open_file_in_tab, { desc = "Open file in new tab" })
+vim.keymap.set("n", "<leader>td", duplicate_tab, { desc = "Duplicate current tab" })
+vim.keymap.set("n", "<leader>tr", close_tabs_right, { desc = "Close tabs to the right" })
+vim.keymap.set("n", "<leader>tL", close_tabs_left, { desc = "Close tabs to the left" })
 
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(event)
-    vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {buffer = event.buf, desc="Show diagnostic in loclist"})
-    vim.keymap.set('n', '<C-h>', function() vim.diagnostic.open_float() end, {buffer = event.buf, desc="Show diagnostic under cursor"})
-  end,
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(event)
+		vim.keymap.set(
+			"n",
+			"<leader>q",
+			vim.diagnostic.setloclist,
+			{ buffer = event.buf, desc = "Show diagnostic in loclist" }
+		)
+		vim.keymap.set("n", "<C-h>", function()
+			vim.diagnostic.open_float()
+		end, { buffer = event.buf, desc = "Show diagnostic under cursor" })
+	end,
 })
-vim.keymap.set('i', "<C-Space>", "<C-X><C-O>", {desc="Omni completion"})
-
+vim.keymap.set("i", "<C-Space>", "<C-X><C-O>", { desc = "Omni completion" })
