@@ -20,8 +20,8 @@ vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
 
 	-- Completion
-	{ src = "http://github.com/saghen/blink.cmp", version = vim.version.range("1") },
-	{ src = "http://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1") },
+	{ src = "https://github.com/rafamadriz/friendly-snippets" }, -- snippets suggestions
 })
 
 require("plugins.treesitter")
