@@ -85,13 +85,12 @@ require("gp").setup({
 		},
 	},
 	hooks = {
-		Translator = function(gp, params)
-			local chat_system_prompt = "You are a translator, please translate from English to Russian and from Russian to English."
-			gp.cmd.ChatNew(params, chat_system_prompt)
-
-			-- -- you can also create a chat with a specific fixed agent like this:
+		Translate = function(gp, params)
+			local template = "I have the following text from {{filename}}:\n\n"
+				.. "```{{filetype}}\n{{selection}}\n```\n\n"
+				.. "Please translate it betweeen English and Russian, return only translation."
 			local agent = gp.get_chat_agent("gemini-2.5-flash")
-			gp.cmd.ChatNew(params, chat_system_prompt, agent)
+			gp.Prompt(params, gp.Target.popup, agent, template)
 		end,
 
 		Explain = function(gp, params)
@@ -115,5 +114,6 @@ require("gp").setup({
 })
 
 
-vim.keymap.set("v", "<leader>ae", ":GptExplain<CR>", { desc = "Explain code" })
-vim.keymap.set("v", "<leader>at", ":GptTranslateInline<CR>", { desc = "Translate between english and russian" })
+vim.keymap.set("v", "<leader>ae", ":GpExplain<CR>", { desc = "Explain code" })
+vim.keymap.set("v", "<leader>at", ":GpTranslate<CR>", { desc = "Translate between english and russian" })
+vim.keymap.set("v", "<leader>ait", ":GpTranslateInline<CR>", { desc = "Translate inline between english and russian" })
