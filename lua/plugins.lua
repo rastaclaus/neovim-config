@@ -6,9 +6,7 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 
 	-- Colorschemes
-	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
 	{ src = "https://github.com/ribru17/bamboo.nvim"}, -- colorscheme
-	{ src = "https://github.com/ellisonleao/gruvbox.nvim"}, -- colorscheme
 
 	-- Oil
 	{ src = "https://github.com/stevearc/oil.nvim" }, -- file manager
