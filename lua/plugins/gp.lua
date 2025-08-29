@@ -19,7 +19,7 @@ require("gp").setup({
 			chat = true,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gpt-5", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -29,7 +29,7 @@ require("gp").setup({
 			chat = false,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gpt-5-mini", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -39,7 +39,7 @@ require("gp").setup({
 			chat = false,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gpt-5-nano", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -59,7 +59,7 @@ require("gp").setup({
 			chat = false,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gpt-4.1-mini", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -69,7 +69,7 @@ require("gp").setup({
 			chat = true,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gemini-2.5-pro-preview", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -79,7 +79,7 @@ require("gp").setup({
 			chat = false,
 			command = true,
 			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4.1", temperature = 1.1, top_p = 1 },
+			model = { model = "gemini-2.5-flash", temperature = 1.1, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},

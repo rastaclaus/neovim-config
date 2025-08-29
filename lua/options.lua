@@ -61,6 +61,7 @@ vim.opt.mouse = ""                                 -- Disable mouse
 vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
 vim.opt.modifiable = true                          -- Allow buffer modifications
 vim.opt.encoding = "UTF-8"                         -- Set encoding
+require("vim._extui").enable({})
 
 -- Clipboard
 local function paste()
