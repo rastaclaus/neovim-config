@@ -113,3 +113,7 @@ require("gp").setup({
 		end,
 	},
 })
+
+
+vim.keymap.set("v", "<leader>ae", ":GptExplain<CR>", { desc = "Explain code" })
+vim.keymap.set("v", "<leader>at", ":GptTranslateInline<CR>", { desc = "Translate between english and russian" })
