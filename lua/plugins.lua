@@ -7,7 +7,6 @@ vim.pack.add({
 
 	-- Colorschemes
 	{ src = "https://github.com/f4z3r/gruvbox-material.nvim" }, -- colorscheme
-	{ src = "https://github.com/xiyaowong/transparent.nvim"}, -- transparency
 	{ src = "https://github.com/ribru17/bamboo.nvim"}, -- colorscheme
 
 	-- Oil
