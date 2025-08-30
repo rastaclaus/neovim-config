@@ -16,7 +16,7 @@ vim.diagnostic.config({
 	}
 })
 
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "jsonls", "yamlls", "dockerls" })
+vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "ty", "gopls", "jsonls", "yamlls", "dockerls" })
 
 vim.keymap.set("n", "<leader>lsp", ":LspInfo<CR>", {desc="LspInfo"})
 vim.keymap.set("n", "<leader>lsd", ":LspStop<CR>", {desc="LspStop"})
