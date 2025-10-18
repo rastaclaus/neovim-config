@@ -8,7 +8,15 @@
     "friendly-snippets": [],
     "fzf-lua": [],
     "gp.nvim": [],
+    "nvim-autopairs": {
+      "rev": "7a2c97c",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
     "nvim-lspconfig": [],
+    "nvim-surround": {
+      "rev": "75de178",
+      "src": "https://github.com/kylechui/nvim-surround"
+    },
     "nvim-treesitter": [],
     "nvim-web-devicons": [],
     "oil.nvim": [],
