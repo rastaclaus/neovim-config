@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "bamboo.nvim": [],
+    "blink.cmp": {
+      "version": "1.0.0 - 2.0.0"
+    },
+    "conform.nvim": [],
+    "friendly-snippets": [],
+    "fzf-lua": [],
+    "gp.nvim": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "nvim-web-devicons": [],
+    "oil.nvim": [],
+    "which-key.nvim": []
+  }
+}
