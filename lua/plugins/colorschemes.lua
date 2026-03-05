@@ -1,2 +1,1 @@
-require("bamboo").setup({})
-vim.cmd.colorscheme("bamboo")
+vim.cmd.colorscheme("gruvbox")
