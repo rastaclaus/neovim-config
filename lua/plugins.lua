@@ -25,7 +25,9 @@ vim.pack.add({
 	{ src = "https://github.com/kylechui/nvim-surround"}, -- surround
 
 	-- AI
-	{ src = "https://github.com/robitx/gp.nvim"}
+	{ src = "https://github.com/robitx/gp.nvim"},
+	-- CSV
+	{ src = "https://github.com/kibi2/tirenvi.nvim"}
 })
 
 
