@@ -41,6 +41,7 @@ require("plugins.blink_cmp")
 require("plugins.gp")
 require("plugins.autopairs")
 require("plugins.surround")
+require("plugins.tirenvi")
 
 
 require("plugins.colorschemes")
