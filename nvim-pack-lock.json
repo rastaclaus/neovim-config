@@ -53,6 +53,10 @@
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "render-markdown.nvim": {
+      "rev": "e3c18ddd27a853f85a6f513a864cf4f2982b9f26",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "tirenvi.nvim": {
       "rev": "bfe20fe7f31ba2550115180070ea21c1bb097fc3",
       "src": "https://github.com/kibi2/tirenvi.nvim"
