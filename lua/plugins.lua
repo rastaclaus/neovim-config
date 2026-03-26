@@ -30,8 +30,6 @@ vim.pack.add({
 	{ src = "https://github.com/kibi2/tirenvi.nvim"}
 })
 
-
-
 require("plugins.treesitter")
 require("plugins.oil")
 require("plugins.fzflua")

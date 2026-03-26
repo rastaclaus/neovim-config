@@ -13,48 +13,28 @@
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
     },
-    "diffview.nvim": {
-      "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
-      "src": "https://github.com/sindrets/diffview.nvim"
-    },
     "friendly-snippets": {
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fzf-lua": {
-      "rev": "54669c347fe94d5be41322bd5526095f3e528713",
+      "rev": "bde73a6886b607246095aa59f396de5e0d036890",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gp.nvim": {
-      "rev": "c37f154",
+      "rev": "c37f154b97690c4925fef4e35ffdbf2c844b5f4e",
       "src": "https://github.com/robitx/gp.nvim"
-    },
-    "gruvbox-material.nvim": {
-      "rev": "a57f8ecdb2e7320b1b3b0bbc12934112027d38a5",
-      "src": "https://github.com/f4z3r/gruvbox-material.nvim"
     },
     "gruvbox.nvim": {
       "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
-    },
-    "llm.nvim": {
-      "rev": "e086634a00128c1e13354779ec880c64dbe27149",
-      "src": "https://github.com/Kurama622/llm.nvim"
-    },
-    "neogit": {
-      "rev": "d3890fc3cdf0859845a86b2be306bba01458df1a",
-      "src": "https://github.com/NeogitOrg/neogit"
-    },
-    "nui.nvim": {
-      "rev": "de740991c12411b663994b2860f1a4fd0937c130",
-      "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-autopairs": {
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-lspconfig": {
-      "rev": "702f69fb167e9119f14adc4dfd4fcadf4d1b07a0",
+      "rev": "1a6d69206749a646ef28bfb39460610b14baff40",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
@@ -62,7 +42,7 @@
       "src": "https://github.com/kylechui/nvim-surround"
     },
     "nvim-treesitter": {
-      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
+      "rev": "6620ae1c44dfa8623b22d0cbf873a9e8d073b849",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-web-devicons": {
@@ -73,17 +53,9 @@
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
     },
-    "plenary.nvim": {
-      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
-      "src": "https://github.com/nvim-lua/plenary.nvim"
-    },
     "tirenvi.nvim": {
-      "rev": "77711811b64a8da2bc018360862faf7ee5050a44",
+      "rev": "bfe20fe7f31ba2550115180070ea21c1bb097fc3",
       "src": "https://github.com/kibi2/tirenvi.nvim"
-    },
-    "transparent.nvim": {
-      "rev": "8ac59883de84e9cd1850ea25cf087031c5ba7d54",
-      "src": "https://github.com/xiyaowong/transparent.nvim"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
