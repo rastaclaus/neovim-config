@@ -86,7 +86,7 @@ end
 
 -- Folding settings
 vim.opt.foldmethod = "expr"                             -- Use expression for folding
-vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Use treesitter for folding
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevel = 99                                  -- Start with all folds open
 
 -- Split behavior
