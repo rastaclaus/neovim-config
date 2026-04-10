@@ -14,6 +14,12 @@ require("blink-cmp").setup({
 	-- elsewhere in your config, without redefining it, due to `opts_extend`
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
+		min_keyword_length = 2,
+		providers = {
+			buffer = {
+				min_keyword_length = 4
+			}
+		}
 	},
 
 	-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
