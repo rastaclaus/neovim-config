@@ -103,7 +103,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.diagnostic.setloclist,
 			{ buffer = event.buf, desc = "Show diagnostic in loclist" }
 		)
-		vim.keymap.set("n", "<C-h>", function()
+		vim.keymap.set("n", "<leader>d", function()
 			vim.diagnostic.open_float()
 		end, { buffer = event.buf, desc = "Show diagnostic under cursor" })
 	end,

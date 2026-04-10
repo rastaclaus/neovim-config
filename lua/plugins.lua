@@ -14,7 +14,6 @@ vim.pack.add({
 
 	-- Helpers
 	{ src = "https://github.com/stevearc/conform.nvim" }, -- formatting
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, --syntax parsing
 	{ src = "https://github.com/folke/which-key.nvim" }, -- key suggestions
 	{ src = "https://github.com/neovim/nvim-lspconfig" }, -- lsp autoconfig
 
@@ -32,7 +31,6 @@ vim.pack.add({
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim"}
 })
 
-require("plugins.treesitter")
 require("plugins.oil")
 require("plugins.fzflua")
 require("plugins.which_key")

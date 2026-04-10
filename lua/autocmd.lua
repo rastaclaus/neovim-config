@@ -68,6 +68,28 @@ vim.api.nvim_create_autocmd("VimResized", {
 	end,
 })
 
+vim.filetype.add({
+	pattern = {
+		[".*docker%-compose.*%.ya?ml"] = "yaml.docker-compose",
+		[".*gitlab%-ci.*%.ya?ml"] = "yaml.gitlab",
+		[".*values%.ya?ml"] = "yaml.helm-values",
+	},
+	filename = {
+		["go.work"] = "gowork",
+	},
+	extension = {
+		gotmpl = "gotmpl",
+	},
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	group = augroup,
+	pattern = "markdown",
+	callback = function()
+		vim.opt_local.conceallevel = 2
+	end,
+})
+
 -- Create directories when saving files
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = augroup,

@@ -15,6 +15,8 @@ require("conform").setup({
 		python = { "ruff_format" },
 		go = { "gofmt" },
 		toml = { "pyproject-fmt" },
+		sh = { "shfmt" },
+		bash = { "shfmt" },
 	},
 	format_on_save = nil,
 	formatters = {
