@@ -25,8 +25,6 @@ vim.pack.add({
 
 	-- AI
 	{ src = "https://github.com/robitx/gp.nvim"},
-	-- CSV
-	{ src = "https://github.com/kibi2/tirenvi.nvim"},
 	-- Markdown rendering
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim"}
 })
@@ -39,7 +37,6 @@ require("plugins.blink_cmp")
 require("plugins.gp")
 require("plugins.autopairs")
 require("plugins.surround")
-require("plugins.tirenvi")
 require("plugins.markdown")
 
 
