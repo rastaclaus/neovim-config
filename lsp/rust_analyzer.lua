@@ -4,8 +4,8 @@ return {
 	root_markers = { "Cargo.toml", "rust-project.json", ".git" },
 	settings = {
 		["rust-analyzer"] = {
-			checkOnSave = true,
 			imports = {
+				checkOnSave = true,
 				granularity = {
 					group = "module"
 				},

@@ -14,6 +14,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "ruff_format" },
 		go = { "gofmt" },
+		rust = { "rustfmt" },
 		toml = { "pyproject-fmt" },
 		sh = { "shfmt" },
 		bash = { "shfmt" },
