@@ -25,6 +25,7 @@ vim.pack.add({
 
 	-- AI
 	{ src = "https://github.com/robitx/gp.nvim"},
+	{ src = "https://github.com/nickjvandyke/opencode.nvim", branch = "main" },
 	-- Markdown rendering
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim"}
 })
@@ -38,6 +39,7 @@ require("plugins.gp")
 require("plugins.autopairs")
 require("plugins.surround")
 require("plugins.markdown")
+require("plugins.opencode")
 
 
 require("plugins.colorschemes")
