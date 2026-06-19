@@ -23,9 +23,6 @@ vim.pack.add({
 	{ src = "https://github.com/windwp/nvim-autopairs" }, -- autopairs
 	{ src = "https://github.com/kylechui/nvim-surround"}, -- surround
 
-	-- AI
-	{ src = "https://github.com/robitx/gp.nvim"},
-	{ src = "https://github.com/nickjvandyke/opencode.nvim", branch = "main" },
 	-- Markdown rendering
 	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim"}
 })
@@ -35,11 +32,9 @@ require("plugins.fzflua")
 require("plugins.which_key")
 require("plugins.conform")
 require("plugins.blink_cmp")
-require("plugins.gp")
 require("plugins.autopairs")
 require("plugins.surround")
 require("plugins.markdown")
-require("plugins.opencode")
 
 
 require("plugins.colorschemes")
